@@ -23,7 +23,7 @@ void Geometry()
    //--sey top valuome to be dectro volume
    //geom->SetTopVolume(detac);
    //--define layer Volume
-   TGeoVolume *layer = geom->MakeBox("LAYER", Vacuum,15,15,1.5);
+   TGeoVolume *layer = geom->MakeBox("LAYER", Vacuum,30,30,1.5);
    //layer->SetVisibility(kFALSE);
    geom->SetTopVolume(layer);
    //--- define some materials
@@ -34,34 +34,36 @@ void Geometry()
  
    //--- make the hexagon container volume
    TGeoVolume *hexa = geom->MakePgon("HEXA", Al, 0.0,360.0,6,2);
-   hexa->SetLineColor(kGreen);
+   hexa->SetLineColor(kRed-2);
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
-   Double_t a = 7.5/Sqrt3; 
+   Double_t a = 6;
+   //Double_t a = 4.0;
+   Double_t dr = a*Sqrt3/2.0; 
+   cout<<a<<endl;
    TGeoPgon *pgon = (TGeoPgon*)(hexa->GetShape());
-   pgon->DefineSection(0,0,0,a);
-   pgon->DefineSection(1,1,0,a);
+   pgon->DefineSection(0,0,0,dr);
+   pgon->DefineSection(1,1,0,dr);
    geom->SetTopVolume(hexa);
    
    TGeoTranslation *tr1 = new TGeoTranslation(0., 0., 0.);
    layer->AddNode(hexa, 1, tr1);
- 
+	
+   //geom->CheckPoint(a*Sqrt3*sin(M_PI/3), a*Sqrt3*cos(M_PI/3), 0.0);
+
    TGeoRotation   *rot1 = new TGeoRotation("rot1", 90,180,90,90,0,30);
 
-   TGeoCombiTrans *combi[6];
-   for(int i=1;i<=6;i++){
-	double angle = i*M_PI/3.0;
-	combi[i] = new TGeoCombiTrans(a*Sqrt3*sin(angle),a*Sqrt3*cos(angle), 0., rot1);
-	layer->AddNode(hexa, 1, combi[i]);
+   int num_crl=3;
+   TGeoCombiTrans *combi[6*num_crl];
+   for(int crl=1;crl<=num_crl;crl++){
+   	for(int i=1;i<=6;i++){
+		double angle = i*M_PI/3.0+(crl-1)*M_PI/6.0;
+		if(crl%2==0) combi[i+6*(crl-1)] = new TGeoCombiTrans((crl/2+2)*a*sin(angle),(crl/2+2)*a*cos(angle), 0., rot1);
+		else combi[i+6*(crl-1)] = new TGeoCombiTrans((crl+1)*dr*sin(angle),(crl+1)*dr*cos(angle), 0., rot1);
+		layer->AddNode(hexa, 1, combi[i+6*(crl-1)]);
+		//cout<<i<<endl;
+   	}
    }
-
-   /*TGeoCombiTrans *combi1 = new TGeoCombiTrans(13.7, 7.7, 0., rot1);
-   TGeoCombiTrans *combi2 = new TGeoCombiTrans(13.5, -8, 0., rot1);
-   TGeoCombiTrans *combi3 = new TGeoCombiTrans(0, -15.5, 0., rot1);
-   TGeoCombiTrans *combi4 = new TGeoCombiTrans(-13.5, -7.5, 0., rot1);
-   TGeoCombiTrans *combi5 = new TGeoCombiTrans(-13.5, 7.7, 0., rot1);
-   TGeoCombiTrans *combi6 = new TGeoCombiTrans(0, 15.5, 0., rot1);
-	*/
    //TGeoTranslation *tr2 = new TGeoTranslation(20., 0, 0.);
    //detac->AddNode(layer, 1, tr2);
    geom->CloseGeometry();
@@ -69,4 +71,6 @@ void Geometry()
    geom->SetTopVisible(); // the TOP is invisible
    layer->Draw();
    //myhex->Draw();
+   TView *view = gPad->GetView();
+   view->ShowAxis();
 }
