@@ -34,7 +34,11 @@ void Geometry()
  
    //--- make the hexagon container volume
    TGeoVolume *hexa = geom->MakePgon("HEXA", Al, 0.0,360.0,6,2);
-   hexa->SetLineColor(kRed-2);
+   hexa->SetLineColor(kGreen);
+   
+   //TGeoVolume *hexa1 = geom->MakePgon("HEXA1", Al, 0.0,360.0,6,2);
+   //hexa1->SetLineColor(kGreen);
+
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
    Double_t a = 6;
@@ -58,12 +62,23 @@ void Geometry()
    for(int crl=1;crl<=num_crl;crl++){
    	for(int i=1;i<=6;i++){
 		double angle = i*M_PI/3.0+(crl-1)*M_PI/6.0;
-		if(crl%2==0) combi[i+6*(crl-1)] = new TGeoCombiTrans((crl/2+2)*a*sin(angle),(crl/2+2)*a*cos(angle), 0., rot1);
-		else combi[i+6*(crl-1)] = new TGeoCombiTrans((crl+1)*dr*sin(angle),(crl+1)*dr*cos(angle), 0., rot1);
-		layer->AddNode(hexa, 1, combi[i+6*(crl-1)]);
+		if(crl%2==0){
+		       	combi[i+6*(crl-1)] = new TGeoCombiTrans((crl/2+2)*a*sin(angle),(crl/2+2)*a*cos(angle), 0., rot1);
+			layer->AddNode(hexa, 1, combi[i+6*(crl-1)]);
+		}
+		else{
+			combi[i+6*(crl-1)] = new TGeoCombiTrans((crl+1)*dr*sin(angle),(crl+1)*dr*cos(angle), 0., rot1);
+			layer->AddNode(hexa, 1, combi[i+6*(crl-1)]);
+		}
 		//cout<<i<<endl;
    	}
    }
+
+   TGeoCombiTrans *combi2[6];
+   double angle = atan(3.0*Sqrt3/8.0);
+   double R = sqrt(27.0/4.0+16.0)*dr;
+   combi2[0] = new TGeoCombiTrans(R*sin(angle),R*cos(angle),0.,rot1);//((crl/2+2)*a*sin(an),(crl/2+2)*a*cos(angle), 0., rot1);
+   layer->AddNode(hexa, 1, combi2[0]);
    //TGeoTranslation *tr2 = new TGeoTranslation(20., 0, 0.);
    //detac->AddNode(layer, 1, tr2);
    geom->CloseGeometry();
