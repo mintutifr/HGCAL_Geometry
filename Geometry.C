@@ -27,19 +27,15 @@ void Geometry()
    //layer->SetVisibility(kFALSE);
    geom->SetTopVolume(layer);
    //--- define some materials
-   TGeoMaterial *matAl = new TGeoMaterial("Al", 26.98,13,2.7);
+   TGeoMaterial *matSI = new TGeoMaterial("SI", 28.09,14,1.);
    
    //   //--- define some media
-   TGeoMedium *Al = new TGeoMedium("Root Material",2, matAl);
+   TGeoMedium *SI = new TGeoMedium("Root Material",2, matSI);
  
    //--- make the hexagon container volume
-   TGeoVolume *hexa = geom->MakePgon("HEXA", Al, 0.0,360.0,6,2);
+   TGeoVolume *hexa = geom->MakePgon("HEXA", SI, 0.0,360.0,6,2);
    hexa->SetLineColor(kGreen);
    
-   TGeoVolume *hexa1 = geom->MakePgon("HEXA1", Al, 0.0,360.0,6,2);
-   hexa1->SetFillColor(kRed);
-   hexa1->SetLineColor(kRed);
-
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
    Double_t a = 6;
@@ -51,19 +47,14 @@ void Geometry()
    pgon->DefineSection(1,1,0,dr);
    //geom->SetTopVolume(hexa);
 
-   TGeoPgon *pgon1 = (TGeoPgon*)(hexa1->GetShape());
-   pgon1->DefineSection(0,0,0,dr);
-   pgon1->DefineSection(1,1,0,dr);
-   //geom->SetTopVolume(hexa);
 
    TGeoTranslation *tr1 = new TGeoTranslation(0., 0., 0.);
    layer->AddNode(hexa, 1, tr1);
 	
-   //geom->CheckPoint(a*Sqrt3*sin(M_PI/3), a*Sqrt3*cos(M_PI/3), 0.0);
 
-   TGeoRotation   *rot1 = new TGeoRotation("rot1", 90,180,90,90,0,30);
+   //TGeoRotation   *rot1 = new TGeoRotation("rot1", 90,180,90,90,0,30);
 
-   int num_crl=3;
+   int num_crl=1;
    TGeoTranslation *trns[6*num_crl];
    for(int crl=1;crl<=num_crl;crl++){
    	for(int i=1;i<=6;i++){
@@ -74,7 +65,7 @@ void Geometry()
 		}
 		else{
 			trns[i+6*(crl-1)] = new TGeoTranslation((crl+1)*dr*sin(angle),(crl+1)*dr*cos(angle), 0.);
-			layer->AddNode(hexa1, 1, trns[i+6*(crl-1)]);
+			layer->AddNode(hexa, 1, trns[i+6*(crl-1)]);
 		}
 		//cout<<i<<endl;
    	}

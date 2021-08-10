@@ -14,57 +14,59 @@ void Geometry2()
    //--- Definition of a simple geometry
    TGeoManager *geom = new TGeoManager("world", "the simplest geometry");
    Int_t i;
+
     //--- define some materials
-   TGeoMaterial *matVacuum = new TGeoMaterial("Vacuum", 0,0,0);
+    TGeoMaterial *matVacuum = new TGeoMaterial("Vacuum", 0,0,0);
+    TGeoMaterial *matSi = new TGeoMaterial("Si", 28.09,14,2.3296);
+    TGeoMaterial *matCu = new TGeoMaterial("Cu", 63.546,29,8.96);
+    TGeoMaterial *matPb = new TGeoMaterial("Pb", 207.2,82,11.342);
     //   //--- define some media
-   TGeoMedium *Vacuum = new TGeoMedium("Vacuum",1, matVacuum);
-   //--gefine detector volume	
-   TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, 30., 30.,4.);
-   //--sey top valuome to be dectro volume
-   //geom->SetTopVolume(detac);
+    TGeoMedium *Vacuum = new TGeoMedium("Vacuum",1, matVacuum);
+    TGeoMedium *Si = new TGeoMedium("Si Material",2, matSi);
+    TGeoMedium *Cu = new TGeoMedium("Cu Material",3, matCu);
+    TGeoMedium *Pb = new TGeoMedium("Pb Material",4, matPb);
+
+   //--define detector volume
+   TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, 400., 400.,30.);
    //--define layer Volume
-   TGeoVolume *layer = geom->MakeBox("LAYER", Vacuum,50,50,1.5);
-   //layer->SetVisibility(kFALSE);
-   geom->SetTopVolume(layer);
-   //--- define some materials
-   TGeoMaterial *matAl = new TGeoMaterial("Al", 26.98,13,2.7);
-   
-   //   //--- define some media
-   TGeoMedium *Al = new TGeoMedium("Root Material",2, matAl);
- 
+   TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,400,400,7.1);
+   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,400,400,7.1);
+   TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,400,400,7.1);
+   //set top volume
+   geom->SetTopVolume(detac);
+
+
    //--- make the hexagon container volume
-   TGeoVolume *hexa = geom->MakePgon("HEXA", Al, 0.0,360.0,6,2);
-   hexa->SetLineColor(kGreen);
-   
-   TGeoVolume *hexa1 = geom->MakePgon("HEXA1", Al, 0.0,360.0,6,2);
-   hexa1->SetFillColor(kRed);
-   hexa1->SetLineColor(kRed);
+   TGeoVolume *hexa_si = geom->MakePgon("HEXA_Si", Si, 0.0,360.0,6,2);
+   hexa_si->SetLineColor(kGreen);
+   TGeoVolume *hexa_cu = geom->MakePgon("HEXA_cu", Si, 0.0,360.0,6,2);
+   hexa_cu->SetLineColor(kOrange);
 
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
-   Double_t a = 5;
+   Double_t a = 101.6;
    //Double_t a = 4.0;
    Double_t dr = a*Sqrt3/2.0; 
    cout<<a<<endl;
-   TGeoPgon *pgon = (TGeoPgon*)(hexa->GetShape());
-   pgon->DefineSection(0,0,0,dr);
-   pgon->DefineSection(1,1,0,dr);
-   //geom->SetTopVolume(hexa);
+   TGeoPgon *pgon_si_front = (TGeoPgon*)(hexa_si->GetShape());
+   pgon_si_front->DefineSection(0,7.1,0,dr);
+   pgon_si_front->DefineSection(1,3.1,0,dr);
 
-   TGeoPgon *pgon1 = (TGeoPgon*)(hexa1->GetShape());
-   pgon1->DefineSection(0,0,0,dr);
-   pgon1->DefineSection(1,1,0,dr);
-   //geom->SetTopVolume(hexa);
+   TGeoPgon *pgon_cu = (TGeoPgon*)(hexa_cu->GetShape());
+   pgon_cu->DefineSection(0,3.1,0,dr);
+   pgon_cu->DefineSection(1,-3.1,0,dr);
 
-   TGeoTranslation *tr1 = new TGeoTranslation(0., 0., 0.);
-   layer->AddNode(hexa, 1, tr1);
-	
+
+   layer_active->AddNode(hexa_si, 1, new TGeoTranslation(0., 0., 0.));
+   layer_active->AddNode(hexa_cu, 1, new TGeoTranslation(0., 0., 0.));
+   layer_active->AddNode(hexa_si, 1, new TGeoTranslation(0., 0., -10.2));
+
    //geom->CheckPoint(a*Sqrt3*sin(M_PI/3), a*Sqrt3*cos(M_PI/3), 0.0);
 
    TGeoRotation   *rot1 = new TGeoRotation("rot1", 90,180,90,90,0,30);
 
-   int num_crl=6;
-   TGeoTranslation *trns[6*num_crl];
+   int num_crl=1;
+   TGeoTranslation *trns[3*6*num_crl];
    double X = dr;
    double Y = (3.0/2.0)*(2*dr/Sqrt3);
    double R;
@@ -77,7 +79,7 @@ void Geometry2()
    	            for(int i=1;i<=6;i++){
    	                //cout<<"X: "<<X<<" R : "<<R<<" angle : "<<angle<<" Even"<<endl;
    	                trns[i+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), 0.);
-   	                layer->AddNode(hexa, 1, trns[i+6*(crl-1)]);
+   	                layer_active->AddNode(hexa_si, 1, trns[i+6*(crl-1)]);
    	                angle+=M_PI/3.0;
    	            }
    	            Y+=3.0*a/2.0;
@@ -91,7 +93,11 @@ void Geometry2()
    	            for(int i=1;i<=6;i++){
    	                //cout<<"X: "<<X<<" R : "<<R<<" angle : "<<angle<<" Even"<<endl;
    	                trns[i+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), 0.);
-   	                layer->AddNode(hexa1, 1, trns[i+6*(crl-1)]);
+   	                layer_active->AddNode(hexa_si, 1, trns[i+6*(crl-1)]);
+   	                trns[i+6+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), 0.);
+   	                layer_active->AddNode(hexa_cu, 1, trns[i+6+6*(crl-1)]);
+   	                trns[i+12+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), -10.2);
+   	                layer_active->AddNode(hexa_si, 1, trns[i+12+6*(crl-1)]);
    	                angle+=M_PI/3.0;
    	            }
    	            X+=2*dr;
@@ -99,10 +105,11 @@ void Geometry2()
    	       }
        }
 
+   detac->AddNode(layer_active, 1, new TGeoTranslation(0., 0., 0.));
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
-   layer->Draw();
+   detac->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
    view->ShowAxis();
