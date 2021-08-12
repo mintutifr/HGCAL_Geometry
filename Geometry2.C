@@ -10,6 +10,14 @@
 
 void Geometry2()
 {
+   Double_t a = 101.6;   //Side length od the Hexagone
+   Double_t Width_first_Pb_layer = 3.87;
+   Double_t Width_active_layer = 14.2;
+   Double_t Width_vacuum_layer = 5.1;
+   Double_t length_layer = 5.1*a/2;
+
+   Double_t detector_width = Width_first_Pb_layer+Width_active_layer+Width_vacuum_layer;
+
    gSystem->Load("libGeom");
    //--- Definition of a simple geometry
    TGeoManager *geom = new TGeoManager("world", "the simplest geometry");
@@ -27,11 +35,12 @@ void Geometry2()
     TGeoMedium *Pb = new TGeoMedium("Pb Material",4, matPb);
 
    //--define detector volume
-   TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, 400., 400.,30.);
+   TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, length_layer, length_layer,detector_width/2);
+
    //--define layer Volume
-   TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,400,400,7.1);
-   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,400,400,7.1);
-   TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,400,400,7.1);
+   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,length_layer,length_layer,Width_first_Pb_layer/2);
+   TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,length_layer,length_layer,Width_active_layer/2);
+   TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,length_layer,length_layer,Width_vacuum_layer/2);
    //set top volume
    geom->SetTopVolume(detac);
 
@@ -44,7 +53,6 @@ void Geometry2()
 
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
-   Double_t a = 101.6;
    //Double_t a = 4.0;
    Double_t dr = a*Sqrt3/2.0; 
    cout<<a<<endl;
@@ -104,8 +112,10 @@ void Geometry2()
    	            cout<<"crl : "<<crl<<" 2dr+X: "<<X<<" Y : "<<Y<<" odd"<<endl;
    	       }
        }
-
-   detac->AddNode(layer_active, 1, new TGeoTranslation(0., 0., 0.));
+   //layer_Pb->SetLineColor(kYellow);
+   detac->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., detector_width/2));
+   detac->AddNode(layer_active, 2, new TGeoTranslation(0., 0., detector_width/2+Width_first_Pb_layer));
+   detac->AddNode(layer_vacuum, 3, new TGeoTranslation(0., 0., detector_width/2+Width_first_Pb_layer+Width_active_layer));
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
