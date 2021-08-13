@@ -16,11 +16,12 @@ void Geometry2()
    Double_t Width_vacuum_layer = 5.1;
    Double_t length_layer = 5.1*a/2;
 
-   Double_t detector_width = Width_first_Pb_layer+Width_active_layer+Width_vacuum_layer;
+   Double_t detector_width = Width_first_Pb_layer+Width_active_layer+2*Width_vacuum_layer;
 
    gSystem->Load("libGeom");
    //--- Definition of a simple geometry
    TGeoManager *geom = new TGeoManager("world", "the simplest geometry");
+ 
    Int_t i;
 
     //--- define some materials
@@ -112,10 +113,12 @@ void Geometry2()
    	            cout<<"crl : "<<crl<<" 2dr+X: "<<X<<" Y : "<<Y<<" odd"<<endl;
    	       }
        }
-   //layer_Pb->SetLineColor(kYellow);
-   detac->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., detector_width/2));
-   detac->AddNode(layer_active, 2, new TGeoTranslation(0., 0., detector_width/2+Width_first_Pb_layer));
-   detac->AddNode(layer_vacuum, 3, new TGeoTranslation(0., 0., detector_width/2+Width_first_Pb_layer+Width_active_layer));
+   layer_Pb->SetLineColor(kBlue);
+   layer_vacuum->SetLineColor(kRed);
+   detac->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer/2));
+   detac->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer/2));
+   detac->AddNode(layer_active, 3, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer-Width_active_layer/2));
+   detac->AddNode(layer_vacuum, 4, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer-Width_active_layer-Width_vacuum_layer/2));
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
