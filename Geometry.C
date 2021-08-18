@@ -22,7 +22,7 @@ void Geometry()
    TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, 30., 30.,4.);
    //--sey top valuome to be dectro volume
    //geom->SetTopVolume(detac);
-   //--define layer Volume
+   ///--define layer Volume
    TGeoVolume *layer = geom->MakeBox("LAYER", Vacuum,40,40,1.5);
    //layer->SetVisibility(kFALSE);
    geom->SetTopVolume(layer);
