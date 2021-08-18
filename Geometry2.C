@@ -12,7 +12,8 @@ void Geometry2()
 {
    Double_t a = 10.6;   //Side length od the Hexagone
    Double_t Width_Pb_layer_Typ1 = 3.87;
-   Double_t Width_Pb_layer_Typ2 = 6.077;
+   Double_t Width_Pb_layer_Typ2 = 6.07;
+   Double_t Width_Pb_layer_Typ3 = 9.32;
    Double_t Width_Cu_layer = 6.2;
    Double_t Width_active_layer = 4.0;
    Double_t Width_active_si_wefer = 0.31;
@@ -21,8 +22,9 @@ void Geometry2()
 
    Double_t CEE_Casset_Typ1_width = Width_Pb_layer_Typ1+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
    Double_t CEE_Casset_Typ2_width = Width_Pb_layer_Typ2+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
+   Double_t CEE_Casset_Typ3_width = Width_Pb_layer_Typ3+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
 
-   Double_t detector_width = CEE_Casset_Typ1_width+CEE_Casset_Typ2_width;
+   Double_t detector_width = CEE_Casset_Typ1_width+CEE_Casset_Typ2_width+CEE_Casset_Typ3_width;
 
    gSystem->Load("libGeom");
    //--- Definition of a simple geometry
@@ -46,15 +48,19 @@ void Geometry2()
 
    //--define Casset volumes volume
    TGeoVolume *CEE_Casset_Typ1 = geom->MakeBox("CEE_Casset_Typ1", Vacuum, length_layer, length_layer,CEE_Casset_Typ1_width/2);
+   TGeoVolume *CEE_Casset_Typ2 = geom->MakeBox("CEE_Casset_Typ2", Vacuum, length_layer, length_layer,CEE_Casset_Typ2_width/2);
+   TGeoVolume *CEE_Casset_Typ3 = geom->MakeBox("CEE_Casset_Typ3", Vacuum, length_layer, length_layer,CEE_Casset_Typ3_width/2);
 
    //--define layer Volume
-   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,length_layer,length_layer,Width_Pb_layer_Typ1/2);
+   TGeoVolume *layer_Pb_Typ1 = geom->MakeBox("PbLAYER_Typ1", Pb,length_layer,length_layer,Width_Pb_layer_Typ1/2);
+   TGeoVolume *layer_Pb_Typ2 = geom->MakeBox("PbLAYER_Type2", Pb,length_layer,length_layer,Width_Pb_layer_Typ2/2);
+   TGeoVolume *layer_Pb_Typ3 = geom->MakeBox("PbLAYER_Type3", Pb,length_layer,length_layer,Width_Pb_layer_Typ3/2);
    TGeoVolume *layer_Cu = geom->MakeBox("PbLAYER", Cu,length_layer,length_layer,Width_Cu_layer/2);
    TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,length_layer,length_layer,Width_active_layer/2);
    TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,length_layer,length_layer,Width_vacuum_layer/2);
 
    //set top volume
-   geom->SetTopVolume(CEE_Casset_Typ1);
+   geom->SetTopVolume(detec);
 
 
    //--- make the hexagon container volume
@@ -69,8 +75,6 @@ void Geometry2()
    TGeoPgon *pgon_si_front = (TGeoPgon*)(hexa_si->GetShape());
    pgon_si_front->DefineSection(0,Width_active_si_wefer/2,0,dr);
    pgon_si_front->DefineSection(1,-Width_active_si_wefer/2,0,dr);
-
-
 
 
    layer_active->AddNode(hexa_si, 1, new TGeoTranslation(0., 0., 0.));
@@ -114,20 +118,45 @@ void Geometry2()
    	            cout<<"crl : "<<crl<<" 2dr+X: "<<X<<" Y : "<<Y<<" odd"<<endl;
    	       }
        }
-   layer_Pb->SetLineColor(kBlue);
+   layer_Pb_Typ1->SetLineColor(kBlue);
+   layer_Pb_Typ2->SetLineColor(kBlue);
+   layer_Pb_Typ3->SetLineColor(kBlue);
    layer_vacuum->SetLineColor(kRed);
    layer_Cu->SetLineColor(kOrange);
-   CEE_Casset_Typ1->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1/2));
+   // add volumes in casset type 1
+   CEE_Casset_Typ1->AddNode(layer_Pb_Typ1, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1/2));
    CEE_Casset_Typ1->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer/2));
-   CEE_Casset_Typ1->AddNode(layer_active, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_active, 3, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer/2));
    CEE_Casset_Typ1->AddNode(layer_Cu, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer-Width_Cu_layer/2));
-   CEE_Casset_Typ1->AddNode(layer_active, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer-Width_Cu_layer-Width_active_layer/2));
-   CEE_Casset_Typ1->AddNode(layer_vacuum, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-2*Width_active_layer-Width_Cu_layer-Width_vacuum_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_active, 5, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer-Width_Cu_layer-Width_active_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_vacuum, 6, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-2*Width_active_layer-Width_Cu_layer-Width_vacuum_layer/2));
+
+   // add volumes in casset type 2
+   CEE_Casset_Typ2->AddNode(layer_Pb_Typ2, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2/2));
+   CEE_Casset_Typ2->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2-Width_vacuum_layer/2));
+   CEE_Casset_Typ2->AddNode(layer_active, 3, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2-Width_vacuum_layer-Width_active_layer/2));
+   CEE_Casset_Typ2->AddNode(layer_Cu, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2-Width_vacuum_layer-Width_active_layer-Width_Cu_layer/2));
+   CEE_Casset_Typ2->AddNode(layer_active, 5, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2-Width_vacuum_layer-Width_active_layer-Width_Cu_layer-Width_active_layer/2));
+   CEE_Casset_Typ2->AddNode(layer_vacuum, 6, new TGeoTranslation(0., 0., CEE_Casset_Typ2_width/2-Width_Pb_layer_Typ2-Width_vacuum_layer-2*Width_active_layer-Width_Cu_layer-Width_vacuum_layer/2));
+
+   // add volumes in casset type 2
+   CEE_Casset_Typ3->AddNode(layer_Pb_Typ3, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3/2));
+   CEE_Casset_Typ3->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3-Width_vacuum_layer/2));
+   CEE_Casset_Typ3->AddNode(layer_active, 3, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3-Width_vacuum_layer-Width_active_layer/2));
+   CEE_Casset_Typ3->AddNode(layer_Cu, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3-Width_vacuum_layer-Width_active_layer-Width_Cu_layer/2));
+   CEE_Casset_Typ3->AddNode(layer_active, 5, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3-Width_vacuum_layer-Width_active_layer-Width_Cu_layer-Width_active_layer/2));
+   CEE_Casset_Typ3->AddNode(layer_vacuum, 6, new TGeoTranslation(0., 0., CEE_Casset_Typ3_width/2-Width_Pb_layer_Typ3-Width_vacuum_layer-2*Width_active_layer-Width_Cu_layer-Width_vacuum_layer/2));
+
+    // add casset volume in detector volume
+   detec->AddNode(CEE_Casset_Typ1,1, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width/2));
+   detec->AddNode(CEE_Casset_Typ2,2, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width-CEE_Casset_Typ2_width/2));
+   detec->AddNode(CEE_Casset_Typ3,3, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width-CEE_Casset_Typ2_width-CEE_Casset_Typ3_width/2));
+
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
    geom->Export("mygeometry.xml");
-   CEE_Casset_Typ1->Draw();
+   detec->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
    view->ShowAxis();
