@@ -10,13 +10,19 @@
 
 void Geometry2()
 {
-   Double_t a = 101.6;   //Side length od the Hexagone
-   Double_t Width_first_Pb_layer = 3.87;
-   Double_t Width_active_layer = 14.2;
+   Double_t a = 10.6;   //Side length od the Hexagone
+   Double_t Width_Pb_layer_Typ1 = 3.87;
+   Double_t Width_Pb_layer_Typ2 = 6.077;
+   Double_t Width_Cu_layer = 6.2;
+   Double_t Width_active_layer = 4.0;
+   Double_t Width_active_si_wefer = 0.31;
    Double_t Width_vacuum_layer = 5.1;
    Double_t length_layer = 5.1*a/2;
 
-   Double_t detector_width = Width_first_Pb_layer+Width_active_layer+2*Width_vacuum_layer;
+   Double_t CEE_Casset_Typ1_width = Width_Pb_layer_Typ1+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
+   Double_t CEE_Casset_Typ2_width = Width_Pb_layer_Typ2+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
+
+   Double_t detector_width = CEE_Casset_Typ1_width+CEE_Casset_Typ2_width;
 
    gSystem->Load("libGeom");
    //--- Definition of a simple geometry
@@ -35,22 +41,25 @@ void Geometry2()
     TGeoMedium *Cu = new TGeoMedium("Cu Material",3, matCu);
     TGeoMedium *Pb = new TGeoMedium("Pb Material",4, matPb);
 
-   //--define detector volume
-   TGeoVolume *detac = geom->MakeBox("Detector", Vacuum, length_layer, length_layer,detector_width/2);
+   //--define detecter volume
+   TGeoVolume *detec = geom->MakeBox("Detector", Vacuum, length_layer, length_layer,detector_width/2);
+
+   //--define Casset volumes volume
+   TGeoVolume *CEE_Casset_Typ1 = geom->MakeBox("CEE_Casset_Typ1", Vacuum, length_layer, length_layer,CEE_Casset_Typ1_width/2);
 
    //--define layer Volume
-   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,length_layer,length_layer,Width_first_Pb_layer/2);
+   TGeoVolume *layer_Pb = geom->MakeBox("PbLAYER", Pb,length_layer,length_layer,Width_Pb_layer_Typ1/2);
+   TGeoVolume *layer_Cu = geom->MakeBox("PbLAYER", Cu,length_layer,length_layer,Width_Cu_layer/2);
    TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,length_layer,length_layer,Width_active_layer/2);
    TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,length_layer,length_layer,Width_vacuum_layer/2);
+
    //set top volume
-   geom->SetTopVolume(detac);
+   geom->SetTopVolume(CEE_Casset_Typ1);
 
 
    //--- make the hexagon container volume
    TGeoVolume *hexa_si = geom->MakePgon("HEXA_Si", Si, 0.0,360.0,6,2);
    hexa_si->SetLineColor(kGreen);
-   TGeoVolume *hexa_cu = geom->MakePgon("HEXA_cu", Si, 0.0,360.0,6,2);
-   hexa_cu->SetLineColor(kOrange);
 
    //--side of the hexagon--
    double Sqrt3 = sqrt(3.0);
@@ -58,24 +67,20 @@ void Geometry2()
    Double_t dr = a*Sqrt3/2.0; 
    cout<<a<<endl;
    TGeoPgon *pgon_si_front = (TGeoPgon*)(hexa_si->GetShape());
-   pgon_si_front->DefineSection(0,7.1,0,dr);
-   pgon_si_front->DefineSection(1,3.1,0,dr);
+   pgon_si_front->DefineSection(0,Width_active_si_wefer/2,0,dr);
+   pgon_si_front->DefineSection(1,-Width_active_si_wefer/2,0,dr);
 
-   TGeoPgon *pgon_cu = (TGeoPgon*)(hexa_cu->GetShape());
-   pgon_cu->DefineSection(0,3.1,0,dr);
-   pgon_cu->DefineSection(1,-3.1,0,dr);
+
 
 
    layer_active->AddNode(hexa_si, 1, new TGeoTranslation(0., 0., 0.));
-   layer_active->AddNode(hexa_cu, 1, new TGeoTranslation(0., 0., 0.));
-   layer_active->AddNode(hexa_si, 1, new TGeoTranslation(0., 0., -10.2));
 
    //geom->CheckPoint(a*Sqrt3*sin(M_PI/3), a*Sqrt3*cos(M_PI/3), 0.0);
 
    TGeoRotation   *rot1 = new TGeoRotation("rot1", 90,180,90,90,0,30);
 
    int num_crl=1;
-   TGeoTranslation *trns[3*6*num_crl];
+   TGeoTranslation *trns[6*num_crl];
    double X = dr;
    double Y = (3.0/2.0)*(2*dr/Sqrt3);
    double R;
@@ -103,10 +108,6 @@ void Geometry2()
    	                //cout<<"X: "<<X<<" R : "<<R<<" angle : "<<angle<<" Even"<<endl;
    	                trns[i+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), 0.);
    	                layer_active->AddNode(hexa_si, 1, trns[i+6*(crl-1)]);
-   	                trns[i+6+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), 0.);
-   	                layer_active->AddNode(hexa_cu, 1, trns[i+6+6*(crl-1)]);
-   	                trns[i+12+6*(crl-1)] = new TGeoTranslation(R*sin(angle),R*cos(angle), -10.2);
-   	                layer_active->AddNode(hexa_si, 1, trns[i+12+6*(crl-1)]);
    	                angle+=M_PI/3.0;
    	            }
    	            X+=2*dr;
@@ -115,14 +116,18 @@ void Geometry2()
        }
    layer_Pb->SetLineColor(kBlue);
    layer_vacuum->SetLineColor(kRed);
-   detac->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer/2));
-   detac->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer/2));
-   detac->AddNode(layer_active, 3, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer-Width_active_layer/2));
-   detac->AddNode(layer_vacuum, 4, new TGeoTranslation(0., 0., detector_width/2-Width_first_Pb_layer-Width_vacuum_layer-Width_active_layer-Width_vacuum_layer/2));
+   layer_Cu->SetLineColor(kOrange);
+   CEE_Casset_Typ1->AddNode(layer_Pb, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1/2));
+   CEE_Casset_Typ1->AddNode(layer_vacuum, 2, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_active, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_Cu, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer-Width_Cu_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_active, 1, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-Width_active_layer-Width_Cu_layer-Width_active_layer/2));
+   CEE_Casset_Typ1->AddNode(layer_vacuum, 4, new TGeoTranslation(0., 0., CEE_Casset_Typ1_width/2-Width_Pb_layer_Typ1-Width_vacuum_layer-2*Width_active_layer-Width_Cu_layer-Width_vacuum_layer/2));
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
-   detac->Draw();
+   geom->Export("mygeometry.xml");
+   CEE_Casset_Typ1->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
    view->ShowAxis();

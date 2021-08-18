@@ -1,0 +1,2324 @@
+<?xml version="1.0"?>
+<root setup="2xoo" ref="null" created="2021-08-18 11:00:59" modified="2021-08-18 11:00:59" uuid="7818fcae-ffe5-11eb-b137-9a36909ebeef" version="3" file_version="62206">
+  <XmlKey name="world" cycle="1" created="2021-08-18 11:00:59">
+    <Object class="TGeoManager">
+      <TGeoManager version="17">
+        <TNamed version="1">
+          <TObject fUniqueID="0" fBits="0"/>
+          <fName str="world"/>
+          <fTitle str="the simplest geometry"/>
+        </TNamed>
+        <fNNodes v="21"/>
+        <fVisDensity v="0"/>
+        <fExplodedView v="0"/>
+        <fVisOption v="1"/>
+        <fVisLevel v="3"/>
+        <fNsegments v="20"/>
+        <fNtracks v="0"/>
+        <fMaxVisNodes v="10000"/>
+        <fNpdg v="0"/>
+        <fPdgId>
+          <Array>
+            <Int_t v="0" cnt="1024"/>
+          </Array>
+        </fPdgId>
+        <fStreamVoxels v="true"/>
+        <fPhiCut v="false"/>
+        <fTimeCut v="false"/>
+        <fMatrices>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="16"/>
+          <Int_t v="0"/>
+          <Object class="TGeoIdentity" ref="id34">
+            <TGeoIdentity version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="200000"/>
+                  <fName str="Identity"/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+            </TGeoIdentity>
+          </Object>
+          <Object class="TGeoHMatrix">
+            <TGeoHMatrix version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="200000"/>
+                  <fName str="Identity"/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fTranslation>
+              <fRotationMatrix>
+                <Array>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                </Array>
+              </fRotationMatrix>
+              <fScale>
+                <Array>
+                  <Double_t v="1" cnt="3"/>
+                </Array>
+              </fScale>
+            </TGeoHMatrix>
+          </Object>
+          <Object class="TGeoHMatrix">
+            <TGeoHMatrix version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="200000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fTranslation>
+              <fRotationMatrix>
+                <Array>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                </Array>
+              </fRotationMatrix>
+              <fScale>
+                <Array>
+                  <Double_t v="1" cnt="3"/>
+                </Array>
+              </fScale>
+            </TGeoHMatrix>
+          </Object>
+          <Object class="TGeoTranslation" ref="id9">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="200000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id11">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="15.899999999999999"/>
+                  <Double_t v="9.1798692801150512"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id12">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="15.9"/>
+                  <Double_t v="-9.1798692801150459"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id13">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="2.2484195060968027e-15"/>
+                  <Double_t v="-18.359738560230099"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id14">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="-15.899999999999995"/>
+                  <Double_t v="-9.1798692801150583"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id15">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="-15.900000000000007"/>
+                  <Double_t v="9.179869280115037"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id16">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="-2.0803562592726229e-14"/>
+                  <Double_t v="18.359738560230099"/>
+                  <Double_t v="0"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id3">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="12.199999999999999"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id6">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="7.7150000000000007"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id18">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="3.1650000000000009"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id20">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="-1.9349999999999992"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id21">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="-7.0349999999999993"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+          <Object class="TGeoTranslation" ref="id23">
+            <TGeoTranslation version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="220000"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="2"/>
+                  <Double_t v="-11.585000000000001"/>
+                </Array>
+              </fTranslation>
+            </TGeoTranslation>
+          </Object>
+        </fMatrices>
+        <fShapes>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="7"/>
+          <Int_t v="0"/>
+          <Object class="TGeoBBox" ref="id0">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="Detector"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="29.3735"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoBBox" ref="id24">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="CEE_Casset_Typ1"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="14.135"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoBBox" ref="id1">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="PbLAYER"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="1.9350000000000001"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoBBox" ref="id19">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="PbLAYER"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="3.1000000000000001"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoBBox" ref="id17">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="ACTIVELAYER"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="2"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoBBox" ref="id4">
+            <TGeoBBox version="1">
+              <TGeoShape version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="VACUUMLAYER"/>
+                  <fTitle str=""/>
+                </TNamed>
+                <fShapeId v="256"/>
+                <fShapeBits v="1024"/>
+              </TGeoShape>
+              <fDX v="27.029999999999998"/>
+              <fDY v="27.029999999999998"/>
+              <fDZ v="2.5499999999999998"/>
+              <fOrigin>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fOrigin>
+            </TGeoBBox>
+          </Object>
+          <Object class="TGeoPgon" ref="id7">
+            <TGeoPgon version="1">
+              <TGeoPcon version="1">
+                <TGeoBBox version="1">
+                  <TGeoShape version="2">
+                    <TNamed version="1">
+                      <TObject fUniqueID="0" fBits="0"/>
+                      <fName str="HEXA_Si"/>
+                      <fTitle str=""/>
+                    </TNamed>
+                    <fShapeId v="256"/>
+                    <fShapeBits v="67503104"/>
+                  </TGeoShape>
+                  <fDX v="10.6"/>
+                  <fDY v="10.6"/>
+                  <fDZ v="0.155"/>
+                  <fOrigin>
+                    <Array>
+                      <Double_t v="0" cnt="3"/>
+                    </Array>
+                  </fOrigin>
+                </TGeoBBox>
+                <fNz v="2"/>
+                <fPhi1 v="0"/>
+                <fDphi v="360"/>
+                <fRmin>
+                  <Char_t v="1"/>
+                  <Array>
+                    <Double_t v="0" cnt="2"/>
+                  </Array>
+                </fRmin>
+                <fRmax>
+                  <Char_t v="1"/>
+                  <Array>
+                    <Double_t v="9.1798692801150494" cnt="2"/>
+                  </Array>
+                </fRmax>
+                <fZ>
+                  <Char_t v="1"/>
+                  <Array>
+                    <Double_t v="-0.155"/>
+                    <Double_t v="0.155"/>
+                  </Array>
+                </fZ>
+              </TGeoPcon>
+              <fNedges v="6"/>
+            </TGeoPgon>
+          </Object>
+        </fShapes>
+        <fVolumes>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="7"/>
+          <Int_t v="0"/>
+          <Object class="TGeoVolume" ref="id35">
+            <TGeoVolume version="6">
+              <TNamed version="1">
+                <TObject fUniqueID="0" fBits="0"/>
+                <fName str="Detector"/>
+                <fTitle str=""/>
+              </TNamed>
+              <TGeoAtt version="1">
+                <fGeoAtt v="3084"/>
+              </TGeoAtt>
+              <TAttLine version="2">
+                <fLineColor v="1"/>
+                <fLineStyle v="1"/>
+                <fLineWidth v="1"/>
+              </TAttLine>
+              <TAttFill version="2">
+                <fFillColor v="19"/>
+                <fFillStyle v="1001"/>
+              </TAttFill>
+              <TAtt3D version="1"/>
+              <fNodes>
+                <Object ptr="null"/>
+              </fNodes>
+              <fShape>
+                <Object ptr="id0"/>
+              </fShape>
+              <fMedium>
+                <Object class="TGeoMedium" ref="id5">
+                  <TGeoMedium version="1">
+                    <TNamed version="1">
+                      <TObject fUniqueID="0" fBits="0"/>
+                      <fName str="Vacuum"/>
+                      <fTitle str=""/>
+                    </TNamed>
+                    <fId v="1"/>
+                    <fParams>
+                      <Array>
+                        <Double_t v="0" cnt="20"/>
+                      </Array>
+                    </fParams>
+                    <fMaterial>
+                      <Object class="TGeoMaterial" ref="id27">
+                        <TGeoMaterial version="7">
+                          <TNamed version="1">
+                            <TObject fUniqueID="0" fBits="20000"/>
+                            <fName str="Vacuum"/>
+                            <fTitle str=""/>
+                          </TNamed>
+                          <TAttFill version="2">
+                            <fFillColor v="19"/>
+                            <fFillStyle v="1001"/>
+                          </TAttFill>
+                          <fIndex v="0"/>
+                          <fA v="0"/>
+                          <fZ v="0"/>
+                          <fDensity v="0"/>
+                          <fRadLen v="1e+30"/>
+                          <fIntLen v="1e+30"/>
+                          <fTemperature v="273.14999999999998"/>
+                          <fPressure v="632420000"/>
+                          <fState v="0"/>
+                          <fShader>
+                            <Object ptr="null"/>
+                          </fShader>
+                          <fCerenkov>
+                            <Object ptr="null"/>
+                          </fCerenkov>
+                          <fElement>
+                            <Object ptr="null"/>
+                          </fElement>
+                          <fProperties>
+                            <Version v="5"/>
+                            <Version v="1"/>
+                            <UInt_t v="0"/>
+                            <UInt_t v="50331648"/>
+                            <string v=""/>
+                            <Int_t v="0"/>
+                          </fProperties>
+                          <fConstProperties>
+                            <Version v="5"/>
+                            <Version v="1"/>
+                            <UInt_t v="0"/>
+                            <UInt_t v="50331648"/>
+                            <string v=""/>
+                            <Int_t v="0"/>
+                          </fConstProperties>
+                        </TGeoMaterial>
+                      </Object>
+                    </fMaterial>
+                  </TGeoMedium>
+                </Object>
+              </fMedium>
+              <fFinder>
+                <Object ptr="null"/>
+              </fFinder>
+              <fVoxels>
+                <Object ptr="null"/>
+              </fVoxels>
+              <fNumber v="1"/>
+              <fNtotal v="0"/>
+              <fRefCount v="0"/>
+            </TGeoVolume>
+          </Object>
+          <Object class="TGeoVolume" ref="id2">
+            <TGeoVolume version="6">
+              <TNamed version="1">
+                <TObject fUniqueID="0" fBits="900000"/>
+                <fName str="CEE_Casset_Typ1"/>
+                <fTitle str="Top volume"/>
+              </TNamed>
+              <TGeoAtt version="1">
+                <fGeoAtt v="3084"/>
+              </TGeoAtt>
+              <TAttLine version="2">
+                <fLineColor v="1"/>
+                <fLineStyle v="1"/>
+                <fLineWidth v="1"/>
+              </TAttLine>
+              <TAttFill version="2">
+                <fFillColor v="19"/>
+                <fFillStyle v="1001"/>
+              </TAttFill>
+              <TAtt3D version="1"/>
+              <fNodes>
+                <Object class="TObjArray">
+                  <Version v="3"/>
+                  <Version v="1"/>
+                  <UInt_t v="0"/>
+                  <UInt_t v="50331648"/>
+                  <string v=""/>
+                  <Int_t v="6"/>
+                  <Int_t v="0"/>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="PbLAYER_1"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object class="TGeoVolume" ref="id25">
+                            <TGeoVolume version="6">
+                              <TNamed version="1">
+                                <TObject fUniqueID="0" fBits="800000"/>
+                                <fName str="PbLAYER"/>
+                                <fTitle str=""/>
+                              </TNamed>
+                              <TGeoAtt version="1">
+                                <fGeoAtt v="3084"/>
+                              </TGeoAtt>
+                              <TAttLine version="2">
+                                <fLineColor v="600"/>
+                                <fLineStyle v="1"/>
+                                <fLineWidth v="1"/>
+                              </TAttLine>
+                              <TAttFill version="2">
+                                <fFillColor v="19"/>
+                                <fFillStyle v="1001"/>
+                              </TAttFill>
+                              <TAtt3D version="1"/>
+                              <fNodes>
+                                <Object ptr="null"/>
+                              </fNodes>
+                              <fShape>
+                                <Object ptr="id1"/>
+                              </fShape>
+                              <fMedium>
+                                <Object class="TGeoMedium" ref="id33">
+                                  <TGeoMedium version="1">
+                                    <TNamed version="1">
+                                      <TObject fUniqueID="0" fBits="0"/>
+                                      <fName str="Pb Material"/>
+                                      <fTitle str=""/>
+                                    </TNamed>
+                                    <fId v="4"/>
+                                    <fParams>
+                                      <Array>
+                                        <Double_t v="0" cnt="20"/>
+                                      </Array>
+                                    </fParams>
+                                    <fMaterial>
+                                      <Object class="TGeoMaterial" ref="id30">
+                                        <TGeoMaterial version="7">
+                                          <TNamed version="1">
+                                            <TObject fUniqueID="0" fBits="20000"/>
+                                            <fName str="Pb"/>
+                                            <fTitle str=""/>
+                                          </TNamed>
+                                          <TAttFill version="2">
+                                            <fFillColor v="19"/>
+                                            <fFillStyle v="1001"/>
+                                          </TAttFill>
+                                          <fIndex v="3"/>
+                                          <fA v="207.19999999999999"/>
+                                          <fZ v="82"/>
+                                          <fDensity v="11.342000000000001"/>
+                                          <fRadLen v="0.56210621568745267"/>
+                                          <fIntLen v="18.272073998560398"/>
+                                          <fTemperature v="273.14999999999998"/>
+                                          <fPressure v="632420000"/>
+                                          <fState v="0"/>
+                                          <fShader>
+                                            <Object ptr="null"/>
+                                          </fShader>
+                                          <fCerenkov>
+                                            <Object ptr="null"/>
+                                          </fCerenkov>
+                                          <fElement>
+                                            <Object ptr="null"/>
+                                          </fElement>
+                                          <fProperties>
+                                            <Version v="5"/>
+                                            <Version v="1"/>
+                                            <UInt_t v="0"/>
+                                            <UInt_t v="50331648"/>
+                                            <string v=""/>
+                                            <Int_t v="0"/>
+                                          </fProperties>
+                                          <fConstProperties>
+                                            <Version v="5"/>
+                                            <Version v="1"/>
+                                            <UInt_t v="0"/>
+                                            <UInt_t v="50331648"/>
+                                            <string v=""/>
+                                            <Int_t v="0"/>
+                                          </fConstProperties>
+                                        </TGeoMaterial>
+                                      </Object>
+                                    </fMaterial>
+                                  </TGeoMedium>
+                                </Object>
+                              </fMedium>
+                              <fFinder>
+                                <Object ptr="null"/>
+                              </fFinder>
+                              <fVoxels>
+                                <Object ptr="null"/>
+                              </fVoxels>
+                              <fNumber v="3"/>
+                              <fNtotal v="1"/>
+                              <fRefCount v="1"/>
+                            </TGeoVolume>
+                          </Object>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="1"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id3"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="VACUUMLAYER_2"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object class="TGeoVolume" ref="id22">
+                            <TGeoVolume version="6">
+                              <TNamed version="1">
+                                <TObject fUniqueID="0" fBits="804000"/>
+                                <fName str="VACUUMLAYER"/>
+                                <fTitle str=""/>
+                              </TNamed>
+                              <TGeoAtt version="1">
+                                <fGeoAtt v="3084"/>
+                              </TGeoAtt>
+                              <TAttLine version="2">
+                                <fLineColor v="632"/>
+                                <fLineStyle v="1"/>
+                                <fLineWidth v="1"/>
+                              </TAttLine>
+                              <TAttFill version="2">
+                                <fFillColor v="19"/>
+                                <fFillStyle v="1001"/>
+                              </TAttFill>
+                              <TAtt3D version="1"/>
+                              <fNodes>
+                                <Object ptr="null"/>
+                              </fNodes>
+                              <fShape>
+                                <Object ptr="id4"/>
+                              </fShape>
+                              <fMedium>
+                                <Object ptr="id5"/>
+                              </fMedium>
+                              <fFinder>
+                                <Object ptr="null"/>
+                              </fFinder>
+                              <fVoxels>
+                                <Object ptr="null"/>
+                              </fVoxels>
+                              <fNumber v="5"/>
+                              <fNtotal v="1"/>
+                              <fRefCount v="2"/>
+                            </TGeoVolume>
+                          </Object>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="2"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id6"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="ACTIVELAYER_1"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object class="TGeoVolume" ref="id8">
+                            <TGeoVolume version="6">
+                              <TNamed version="1">
+                                <TObject fUniqueID="0" fBits="904000"/>
+                                <fName str="ACTIVELAYER"/>
+                                <fTitle str=""/>
+                              </TNamed>
+                              <TGeoAtt version="1">
+                                <fGeoAtt v="3084"/>
+                              </TGeoAtt>
+                              <TAttLine version="2">
+                                <fLineColor v="1"/>
+                                <fLineStyle v="1"/>
+                                <fLineWidth v="1"/>
+                              </TAttLine>
+                              <TAttFill version="2">
+                                <fFillColor v="19"/>
+                                <fFillStyle v="1001"/>
+                              </TAttFill>
+                              <TAtt3D version="1"/>
+                              <fNodes>
+                                <Object class="TObjArray">
+                                  <Version v="3"/>
+                                  <Version v="1"/>
+                                  <UInt_t v="0"/>
+                                  <UInt_t v="50331648"/>
+                                  <string v=""/>
+                                  <Int_t v="7"/>
+                                  <Int_t v="0"/>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object class="TGeoVolume" ref="id10">
+                                            <TGeoVolume version="6">
+                                              <TNamed version="1">
+                                                <TObject fUniqueID="0" fBits="804000"/>
+                                                <fName str="HEXA_Si"/>
+                                                <fTitle str=""/>
+                                              </TNamed>
+                                              <TGeoAtt version="1">
+                                                <fGeoAtt v="3084"/>
+                                              </TGeoAtt>
+                                              <TAttLine version="2">
+                                                <fLineColor v="416"/>
+                                                <fLineStyle v="1"/>
+                                                <fLineWidth v="1"/>
+                                              </TAttLine>
+                                              <TAttFill version="2">
+                                                <fFillColor v="19"/>
+                                                <fFillStyle v="1001"/>
+                                              </TAttFill>
+                                              <TAtt3D version="1"/>
+                                              <fNodes>
+                                                <Object ptr="null"/>
+                                              </fNodes>
+                                              <fShape>
+                                                <Object ptr="id7"/>
+                                              </fShape>
+                                              <fMedium>
+                                                <Object class="TGeoMedium" ref="id31">
+                                                  <TGeoMedium version="1">
+                                                    <TNamed version="1">
+                                                      <TObject fUniqueID="0" fBits="0"/>
+                                                      <fName str="Si Material"/>
+                                                      <fTitle str=""/>
+                                                    </TNamed>
+                                                    <fId v="2"/>
+                                                    <fParams>
+                                                      <Array>
+                                                        <Double_t v="0" cnt="20"/>
+                                                      </Array>
+                                                    </fParams>
+                                                    <fMaterial>
+                                                      <Object class="TGeoMaterial" ref="id28">
+                                                        <TGeoMaterial version="7">
+                                                          <TNamed version="1">
+                                                            <TObject fUniqueID="0" fBits="20000"/>
+                                                            <fName str="Si"/>
+                                                            <fTitle str=""/>
+                                                          </TNamed>
+                                                          <TAttFill version="2">
+                                                            <fFillColor v="19"/>
+                                                            <fFillStyle v="1001"/>
+                                                          </TAttFill>
+                                                          <fIndex v="1"/>
+                                                          <fA v="28.09"/>
+                                                          <fZ v="14"/>
+                                                          <fDensity v="2.3296000000000001"/>
+                                                          <fRadLen v="9.3526982674282859"/>
+                                                          <fIntLen v="45.761133981080256"/>
+                                                          <fTemperature v="273.14999999999998"/>
+                                                          <fPressure v="632420000"/>
+                                                          <fState v="0"/>
+                                                          <fShader>
+                                                            <Object ptr="null"/>
+                                                          </fShader>
+                                                          <fCerenkov>
+                                                            <Object ptr="null"/>
+                                                          </fCerenkov>
+                                                          <fElement>
+                                                            <Object ptr="null"/>
+                                                          </fElement>
+                                                          <fProperties>
+                                                            <Version v="5"/>
+                                                            <Version v="1"/>
+                                                            <UInt_t v="0"/>
+                                                            <UInt_t v="50331648"/>
+                                                            <string v=""/>
+                                                            <Int_t v="0"/>
+                                                          </fProperties>
+                                                          <fConstProperties>
+                                                            <Version v="5"/>
+                                                            <Version v="1"/>
+                                                            <UInt_t v="0"/>
+                                                            <UInt_t v="50331648"/>
+                                                            <string v=""/>
+                                                            <Int_t v="0"/>
+                                                          </fConstProperties>
+                                                        </TGeoMaterial>
+                                                      </Object>
+                                                    </fMaterial>
+                                                  </TGeoMedium>
+                                                </Object>
+                                              </fMedium>
+                                              <fFinder>
+                                                <Object ptr="null"/>
+                                              </fFinder>
+                                              <fVoxels>
+                                                <Object ptr="null"/>
+                                              </fVoxels>
+                                              <fNumber v="6"/>
+                                              <fNtotal v="1"/>
+                                              <fRefCount v="7"/>
+                                            </TGeoVolume>
+                                          </Object>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id9"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id11"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id12"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id13"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id14"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id15"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                  <Object class="TGeoNodeMatrix">
+                                    <TGeoNodeMatrix version="1">
+                                      <TGeoNode version="2">
+                                        <TNamed version="1">
+                                          <TObject fUniqueID="0" fBits="0"/>
+                                          <fName str="HEXA_Si_1"/>
+                                          <fTitle str=""/>
+                                        </TNamed>
+                                        <TGeoAtt version="1">
+                                          <fGeoAtt v="3084"/>
+                                        </TGeoAtt>
+                                        <fVolume>
+                                          <Object ptr="id10"/>
+                                        </fVolume>
+                                        <fMother>
+                                          <Object ptr="id8"/>
+                                        </fMother>
+                                        <fNumber v="1"/>
+                                        <fNovlp v="0"/>
+                                        <fOverlaps>
+                                          <Char_t v="0"/>
+                                        </fOverlaps>
+                                      </TGeoNode>
+                                      <fMatrix>
+                                        <Object ptr="id16"/>
+                                      </fMatrix>
+                                    </TGeoNodeMatrix>
+                                  </Object>
+                                </Object>
+                              </fNodes>
+                              <fShape>
+                                <Object ptr="id17"/>
+                              </fShape>
+                              <fMedium>
+                                <Object ptr="id5"/>
+                              </fMedium>
+                              <fFinder>
+                                <Object ptr="null"/>
+                              </fFinder>
+                              <fVoxels>
+                                <Object class="TGeoVoxelFinder">
+                                  <TGeoVoxelFinder version="4">
+                                    <TObject fUniqueID="0" fBits="0"/>
+                                    <fVolume>
+                                      <Object ptr="id8"/>
+                                    </fVolume>
+                                    <fIbx v="6"/>
+                                    <fIby v="10"/>
+                                    <fIbz v="2"/>
+                                    <fNboxes v="42"/>
+                                    <fNox v="5"/>
+                                    <fNoy v="9"/>
+                                    <fNoz v="0"/>
+                                    <fNex v="24"/>
+                                    <fNey v="32"/>
+                                    <fNez v="0"/>
+                                    <fNx v="5"/>
+                                    <fNy v="9"/>
+                                    <fNz v="0"/>
+                                    <fPriority>
+                                      <Array>
+                                        <Int_t v="2" cnt="2"/>
+                                        <Int_t v="1"/>
+                                      </Array>
+                                    </fPriority>
+                                    <fBoxes>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Double_t v="10.6" cnt="2"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="0" cnt="3"/>
+                                        <Double_t v="10.600000000000001"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="15.899999999999999"/>
+                                        <Double_t v="9.1798692801150512"/>
+                                        <Double_t v="0"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="10.599999999999998"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="15.9"/>
+                                        <Double_t v="-9.1798692801150459"/>
+                                        <Double_t v="0"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="10.600000000000001"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="1.7763568394002505e-15"/>
+                                        <Double_t v="-18.359738560230099"/>
+                                        <Double_t v="0"/>
+                                        <Double_t v="10.599999999999998"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="-15.899999999999995"/>
+                                        <Double_t v="-9.1798692801150583"/>
+                                        <Double_t v="0"/>
+                                        <Double_t v="10.6" cnt="2"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="-15.900000000000007"/>
+                                        <Double_t v="9.179869280115037"/>
+                                        <Double_t v="0"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="10.600000000000001"/>
+                                        <Double_t v="0.155"/>
+                                        <Double_t v="-2.1316282072803006e-14"/>
+                                        <Double_t v="18.359738560230099"/>
+                                        <Double_t v="0"/>
+                                      </Array>
+                                    </fBoxes>
+                                    <fXb>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Double_t v="-26.500000000000007"/>
+                                        <Double_t v="-10.600000000000021"/>
+                                        <Double_t v="-5.3000000000000078"/>
+                                        <Double_t v="5.2999999999999972"/>
+                                        <Double_t v="10.599999999999978"/>
+                                        <Double_t v="26.5"/>
+                                      </Array>
+                                    </fXb>
+                                    <fYb>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Double_t v="-28.9597385602301"/>
+                                        <Double_t v="-19.779869280115058"/>
+                                        <Double_t v="-10.6"/>
+                                        <Double_t v="-7.7597385602300974"/>
+                                        <Double_t v="-1.4201307198849626"/>
+                                        <Double_t v="1.4201307198849413"/>
+                                        <Double_t v="7.7597385602300974"/>
+                                        <Double_t v="10.6"/>
+                                        <Double_t v="19.779869280115037"/>
+                                        <Double_t v="28.9597385602301"/>
+                                      </Array>
+                                    </fYb>
+                                    <fZb>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Double_t v="-0.155"/>
+                                        <Double_t v="0.155"/>
+                                      </Array>
+                                    </fZb>
+                                    <fOBx>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="0"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="4"/>
+                                      </Array>
+                                    </fOBx>
+                                    <fOBy>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="0"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="6"/>
+                                        <Int_t v="7"/>
+                                        <Int_t v="8"/>
+                                      </Array>
+                                    </fOBy>
+                                    <fOBz>
+                                      <Char_t v="0"/>
+                                    </fOBz>
+                                    <fOEx>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="0"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="11"/>
+                                        <Int_t v="13"/>
+                                        <Int_t v="20"/>
+                                      </Array>
+                                    </fOEx>
+                                    <fOEy>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="0"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="7"/>
+                                        <Int_t v="11"/>
+                                        <Int_t v="13"/>
+                                        <Int_t v="19"/>
+                                        <Int_t v="21"/>
+                                        <Int_t v="25"/>
+                                        <Int_t v="29"/>
+                                      </Array>
+                                    </fOEy>
+                                    <fOEz>
+                                      <Char_t v="0"/>
+                                    </fOEz>
+                                    <fExtraX>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="2"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="6"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="0" cnt="2"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="6"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="2"/>
+                                      </Array>
+                                    </fExtraX>
+                                    <fExtraY>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="1"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="1" cnt="2"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="0" cnt="2"/>
+                                        <Int_t v="2" cnt="2"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="0" cnt="2"/>
+                                        <Int_t v="1" cnt="2"/>
+                                        <Int_t v="6"/>
+                                        <Int_t v="0" cnt="2"/>
+                                        <Int_t v="2"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="0"/>
+                                        <Int_t v="1"/>
+                                        <Int_t v="6"/>
+                                      </Array>
+                                    </fExtraY>
+                                    <fExtraZ>
+                                      <Char_t v="0"/>
+                                    </fExtraZ>
+                                    <fNsliceX>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="2"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="2"/>
+                                      </Array>
+                                    </fNsliceX>
+                                    <fNsliceY>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <Int_t v="1"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="5"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="4"/>
+                                        <Int_t v="3"/>
+                                        <Int_t v="1"/>
+                                      </Array>
+                                    </fNsliceY>
+                                    <fNsliceZ>
+                                      <Char_t v="0"/>
+                                    </fNsliceZ>
+                                    <fIndcX>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <UChar_t v="48"/>
+                                        <UChar_t v="121"/>
+                                        <UChar_t v="73"/>
+                                        <UChar_t v="79"/>
+                                        <UChar_t v="6"/>
+                                      </Array>
+                                    </fIndcX>
+                                    <fIndcY>
+                                      <Char_t v="1"/>
+                                      <Array>
+                                        <UChar_t v="8"/>
+                                        <UChar_t v="28"/>
+                                        <UChar_t v="29"/>
+                                        <UChar_t v="21"/>
+                                        <UChar_t v="55"/>
+                                        <UChar_t v="35"/>
+                                        <UChar_t v="99"/>
+                                        <UChar_t v="98"/>
+                                        <UChar_t v="64"/>
+                                      </Array>
+                                    </fIndcY>
+                                    <fIndcZ>
+                                      <Char_t v="0"/>
+                                    </fIndcZ>
+                                  </TGeoVoxelFinder>
+                                </Object>
+                              </fVoxels>
+                              <fNumber v="4"/>
+                              <fNtotal v="8"/>
+                              <fRefCount v="9"/>
+                            </TGeoVolume>
+                          </Object>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="1"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id18"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="PbLAYER_4"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object class="TGeoVolume" ref="id26">
+                            <TGeoVolume version="6">
+                              <TNamed version="1">
+                                <TObject fUniqueID="0" fBits="800000"/>
+                                <fName str="PbLAYER"/>
+                                <fTitle str=""/>
+                              </TNamed>
+                              <TGeoAtt version="1">
+                                <fGeoAtt v="3084"/>
+                              </TGeoAtt>
+                              <TAttLine version="2">
+                                <fLineColor v="800"/>
+                                <fLineStyle v="1"/>
+                                <fLineWidth v="1"/>
+                              </TAttLine>
+                              <TAttFill version="2">
+                                <fFillColor v="19"/>
+                                <fFillStyle v="1001"/>
+                              </TAttFill>
+                              <TAtt3D version="1"/>
+                              <fNodes>
+                                <Object ptr="null"/>
+                              </fNodes>
+                              <fShape>
+                                <Object ptr="id19"/>
+                              </fShape>
+                              <fMedium>
+                                <Object class="TGeoMedium" ref="id32">
+                                  <TGeoMedium version="1">
+                                    <TNamed version="1">
+                                      <TObject fUniqueID="0" fBits="0"/>
+                                      <fName str="Cu Material"/>
+                                      <fTitle str=""/>
+                                    </TNamed>
+                                    <fId v="3"/>
+                                    <fParams>
+                                      <Array>
+                                        <Double_t v="0" cnt="20"/>
+                                      </Array>
+                                    </fParams>
+                                    <fMaterial>
+                                      <Object class="TGeoMaterial" ref="id29">
+                                        <TGeoMaterial version="7">
+                                          <TNamed version="1">
+                                            <TObject fUniqueID="0" fBits="20000"/>
+                                            <fName str="Cu"/>
+                                            <fTitle str=""/>
+                                          </TNamed>
+                                          <TAttFill version="2">
+                                            <fFillColor v="19"/>
+                                            <fFillStyle v="1001"/>
+                                          </TAttFill>
+                                          <fIndex v="2"/>
+                                          <fA v="63.545999999999999"/>
+                                          <fZ v="29"/>
+                                          <fDensity v="8.9600000000000009"/>
+                                          <fRadLen v="1.4351551962951106"/>
+                                          <fIntLen v="15.514158020274698"/>
+                                          <fTemperature v="273.14999999999998"/>
+                                          <fPressure v="632420000"/>
+                                          <fState v="0"/>
+                                          <fShader>
+                                            <Object ptr="null"/>
+                                          </fShader>
+                                          <fCerenkov>
+                                            <Object ptr="null"/>
+                                          </fCerenkov>
+                                          <fElement>
+                                            <Object ptr="null"/>
+                                          </fElement>
+                                          <fProperties>
+                                            <Version v="5"/>
+                                            <Version v="1"/>
+                                            <UInt_t v="0"/>
+                                            <UInt_t v="50331648"/>
+                                            <string v=""/>
+                                            <Int_t v="0"/>
+                                          </fProperties>
+                                          <fConstProperties>
+                                            <Version v="5"/>
+                                            <Version v="1"/>
+                                            <UInt_t v="0"/>
+                                            <UInt_t v="50331648"/>
+                                            <string v=""/>
+                                            <Int_t v="0"/>
+                                          </fConstProperties>
+                                        </TGeoMaterial>
+                                      </Object>
+                                    </fMaterial>
+                                  </TGeoMedium>
+                                </Object>
+                              </fMedium>
+                              <fFinder>
+                                <Object ptr="null"/>
+                              </fFinder>
+                              <fVoxels>
+                                <Object ptr="null"/>
+                              </fVoxels>
+                              <fNumber v="3"/>
+                              <fNtotal v="1"/>
+                              <fRefCount v="1"/>
+                            </TGeoVolume>
+                          </Object>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="4"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id20"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="ACTIVELAYER_1"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object ptr="id8"/>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="1"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id21"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                  <Object class="TGeoNodeMatrix">
+                    <TGeoNodeMatrix version="1">
+                      <TGeoNode version="2">
+                        <TNamed version="1">
+                          <TObject fUniqueID="0" fBits="0"/>
+                          <fName str="VACUUMLAYER_4"/>
+                          <fTitle str=""/>
+                        </TNamed>
+                        <TGeoAtt version="1">
+                          <fGeoAtt v="3084"/>
+                        </TGeoAtt>
+                        <fVolume>
+                          <Object ptr="id22"/>
+                        </fVolume>
+                        <fMother>
+                          <Object ptr="id2"/>
+                        </fMother>
+                        <fNumber v="4"/>
+                        <fNovlp v="0"/>
+                        <fOverlaps>
+                          <Char_t v="0"/>
+                        </fOverlaps>
+                      </TGeoNode>
+                      <fMatrix>
+                        <Object ptr="id23"/>
+                      </fMatrix>
+                    </TGeoNodeMatrix>
+                  </Object>
+                </Object>
+              </fNodes>
+              <fShape>
+                <Object ptr="id24"/>
+              </fShape>
+              <fMedium>
+                <Object ptr="id5"/>
+              </fMedium>
+              <fFinder>
+                <Object ptr="null"/>
+              </fFinder>
+              <fVoxels>
+                <Object class="TGeoVoxelFinder">
+                  <TGeoVoxelFinder version="4">
+                    <TObject fUniqueID="0" fBits="0"/>
+                    <fVolume>
+                      <Object ptr="id2"/>
+                    </fVolume>
+                    <fIbx v="0"/>
+                    <fIby v="0"/>
+                    <fIbz v="7"/>
+                    <fNboxes v="36"/>
+                    <fNox v="0"/>
+                    <fNoy v="0"/>
+                    <fNoz v="6"/>
+                    <fNex v="0"/>
+                    <fNey v="0"/>
+                    <fNez v="24"/>
+                    <fNx v="0"/>
+                    <fNy v="0"/>
+                    <fNz v="6"/>
+                    <fPriority>
+                      <Array>
+                        <Int_t v="0" cnt="2"/>
+                        <Int_t v="2"/>
+                      </Array>
+                    </fPriority>
+                    <fBoxes>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="1.9350000000000005"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="12.199999999999999"/>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="2.5499999999999998"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="7.7150000000000007"/>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="2"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="3.1650000000000009"/>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="3.1000000000000001"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="-1.9349999999999992"/>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="2.0000000000000004"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="-7.0350000000000001"/>
+                        <Double_t v="27.029999999999998" cnt="2"/>
+                        <Double_t v="2.5500000000000007"/>
+                        <Double_t v="0" cnt="2"/>
+                        <Double_t v="-11.585000000000001"/>
+                      </Array>
+                    </fBoxes>
+                    <fXb>
+                      <Char_t v="0"/>
+                    </fXb>
+                    <fYb>
+                      <Char_t v="0"/>
+                    </fYb>
+                    <fZb>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Double_t v="-14.135000000000002"/>
+                        <Double_t v="-9.0350000000000001"/>
+                        <Double_t v="-5.0350000000000001"/>
+                        <Double_t v="1.1650000000000009"/>
+                        <Double_t v="5.1650000000000009"/>
+                        <Double_t v="10.264999999999999"/>
+                        <Double_t v="14.135"/>
+                      </Array>
+                    </fZb>
+                    <fOBx>
+                      <Char_t v="0"/>
+                    </fOBx>
+                    <fOBy>
+                      <Char_t v="0"/>
+                    </fOBy>
+                    <fOBz>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Int_t v="0"/>
+                        <Int_t v="1"/>
+                        <Int_t v="2"/>
+                        <Int_t v="3"/>
+                        <Int_t v="4"/>
+                        <Int_t v="5"/>
+                      </Array>
+                    </fOBz>
+                    <fOEx>
+                      <Char_t v="0"/>
+                    </fOEx>
+                    <fOEy>
+                      <Char_t v="0"/>
+                    </fOEy>
+                    <fOEz>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Int_t v="0"/>
+                        <Int_t v="4"/>
+                        <Int_t v="8"/>
+                        <Int_t v="12"/>
+                        <Int_t v="16"/>
+                        <Int_t v="20"/>
+                      </Array>
+                    </fOEz>
+                    <fExtraX>
+                      <Char_t v="0"/>
+                    </fExtraX>
+                    <fExtraY>
+                      <Char_t v="0"/>
+                    </fExtraY>
+                    <fExtraZ>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Int_t v="1" cnt="2"/>
+                        <Int_t v="5" cnt="2"/>
+                        <Int_t v="1" cnt="2"/>
+                        <Int_t v="4" cnt="2"/>
+                        <Int_t v="1" cnt="2"/>
+                        <Int_t v="3" cnt="2"/>
+                        <Int_t v="1" cnt="2"/>
+                        <Int_t v="2" cnt="2"/>
+                        <Int_t v="1" cnt="6"/>
+                        <Int_t v="0" cnt="2"/>
+                      </Array>
+                    </fExtraZ>
+                    <fNsliceX>
+                      <Char_t v="0"/>
+                    </fNsliceX>
+                    <fNsliceY>
+                      <Char_t v="0"/>
+                    </fNsliceY>
+                    <fNsliceZ>
+                      <Char_t v="1"/>
+                      <Array>
+                        <Int_t v="1" cnt="6"/>
+                      </Array>
+                    </fNsliceZ>
+                    <fIndcX>
+                      <Char_t v="0"/>
+                    </fIndcX>
+                    <fIndcY>
+                      <Char_t v="0"/>
+                    </fIndcY>
+                    <fIndcZ>
+                      <Char_t v="1"/>
+                      <Array>
+                        <UChar_t v="32"/>
+                        <UChar_t v="16"/>
+                        <UChar_t v="8"/>
+                        <UChar_t v="4"/>
+                        <UChar_t v="2"/>
+                        <UChar_t v="1"/>
+                      </Array>
+                    </fIndcZ>
+                  </TGeoVoxelFinder>
+                </Object>
+              </fVoxels>
+              <fNumber v="2"/>
+              <fNtotal v="21"/>
+              <fRefCount v="6"/>
+            </TGeoVolume>
+          </Object>
+          <Object ptr="id25"/>
+          <Object ptr="id26"/>
+          <Object ptr="id8"/>
+          <Object ptr="id22"/>
+          <Object ptr="id10"/>
+        </fVolumes>
+        <fPhysicalNodes>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fPhysicalNodes>
+        <fTracks>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fTracks>
+        <fPdgNames>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fPdgNames>
+        <fGDMLMatrices>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fGDMLMatrices>
+        <fOpticalSurfaces>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fOpticalSurfaces>
+        <fSkinSurfaces>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fSkinSurfaces>
+        <fBorderSurfaces>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fBorderSurfaces>
+        <fMaterials>
+          <Version v="5"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="4"/>
+          <Object ptr="id27"/>
+          <UChar_t v="0"/>
+          <Object ptr="id28"/>
+          <UChar_t v="0"/>
+          <Object ptr="id29"/>
+          <UChar_t v="0"/>
+          <Object ptr="id30"/>
+          <UChar_t v="0"/>
+        </fMaterials>
+        <fMedia>
+          <Version v="5"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="4"/>
+          <Object ptr="id5"/>
+          <UChar_t v="0"/>
+          <Object ptr="id31"/>
+          <UChar_t v="0"/>
+          <Object ptr="id32"/>
+          <UChar_t v="0"/>
+          <Object ptr="id33"/>
+          <UChar_t v="0"/>
+        </fMedia>
+        <fNodes>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="1"/>
+          <Int_t v="0"/>
+          <Object class="TGeoNodeMatrix">
+            <TGeoNodeMatrix version="1">
+              <TGeoNode version="2">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str="CEE_Casset_Typ1_1"/>
+                  <fTitle str="Top logical node"/>
+                </TNamed>
+                <TGeoAtt version="1">
+                  <fGeoAtt v="3084"/>
+                </TGeoAtt>
+                <fVolume>
+                  <Object ptr="id2"/>
+                </fVolume>
+                <fMother>
+                  <Object ptr="null"/>
+                </fMother>
+                <fNumber v="1"/>
+                <fNovlp v="0"/>
+                <fOverlaps>
+                  <Char_t v="0"/>
+                </fOverlaps>
+              </TGeoNode>
+              <fMatrix>
+                <Object ptr="id34"/>
+              </fMatrix>
+            </TGeoNodeMatrix>
+          </Object>
+        </fNodes>
+        <fOverlaps>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fOverlaps>
+        <fRegions>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+          <Int_t v="0"/>
+        </fRegions>
+        <fMasterVolume>
+          <Object ptr="id2"/>
+        </fMasterVolume>
+        <fGLMatrix>
+          <Object class="TGeoHMatrix">
+            <TGeoHMatrix version="1">
+              <TGeoMatrix version="1">
+                <TNamed version="1">
+                  <TObject fUniqueID="0" fBits="0"/>
+                  <fName str=""/>
+                  <fTitle str=""/>
+                </TNamed>
+              </TGeoMatrix>
+              <fTranslation>
+                <Array>
+                  <Double_t v="0" cnt="3"/>
+                </Array>
+              </fTranslation>
+              <fRotationMatrix>
+                <Array>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                  <Double_t v="0" cnt="3"/>
+                  <Double_t v="1"/>
+                </Array>
+              </fRotationMatrix>
+              <fScale>
+                <Array>
+                  <Double_t v="1" cnt="3"/>
+                </Array>
+              </fScale>
+            </TGeoHMatrix>
+          </Object>
+        </fGLMatrix>
+        <fUniqueVolumes>
+          <Version v="3"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="7"/>
+          <Int_t v="0"/>
+          <Object ptr="id2"/>
+          <Object ptr="id35"/>
+          <Object ptr="id2"/>
+          <Object ptr="id25"/>
+          <Object ptr="id8"/>
+          <Object ptr="id22"/>
+          <Object ptr="id10"/>
+        </fUniqueVolumes>
+        <fNLevel v="100"/>
+        <fHashPNE>
+          <Version v="5"/>
+          <Version v="1"/>
+          <UInt_t v="0"/>
+          <UInt_t v="50331648"/>
+          <string v=""/>
+          <Int_t v="0"/>
+        </fHashPNE>
+        <fSizePNEId v="0"/>
+        <fNPNEId v="0"/>
+        <fKeyPNEId>
+          <Char_t v="0"/>
+        </fKeyPNEId>
+        <fValuePNEId>
+          <Char_t v="0"/>
+        </fValuePNEId>
+        <fUsePWNav v="false"/>
+        <fParallelWorld>
+          <Object ptr="null"/>
+        </fParallelWorld>
+        <fProperties>
+          <Version v="9"/>
+          <Int_t v="0"/>
+        </fProperties>
+      </TGeoManager>
+    </Object>
+  </XmlKey>
+  <StreamerInfos>
+    <TStreamerInfo name="TNamed" title="" v="9" classversion="1" canoptimize="true" checksum="-541636036">
+      <TStreamerBase name="TObject" title="Basic ROOT object" v="3" type="66" typename="BASE" size="16" baseversion="1" basechecksum="-1877229523"/>
+      <TStreamerString name="fName" title="object identifier" v="2" type="65" typename="TString" size="24"/>
+      <TStreamerString name="fTitle" title="object title" v="2" type="65" typename="TString" size="24"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TObject" title="" v="9" classversion="1" canoptimize="true" checksum="-1877229523">
+      <TStreamerBasicType name="fUniqueID" title="object unique identifier" v="2" type="13" typename="unsigned int" size="4"/>
+      <TStreamerBasicType name="fBits" title="bit field status word" v="2" type="15" typename="unsigned int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TSeqCollection" title="" v="9" classversion="0" canoptimize="true" checksum="-60015674">
+      <TStreamerBase name="TCollection" title="Collection abstract base class" v="3" type="0" typename="BASE" size="48" baseversion="3" basechecksum="1474546588"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TCollection" title="" v="9" classversion="3" canoptimize="true" checksum="1474546588">
+      <TStreamerBase name="TObject" title="Basic ROOT object" v="3" type="66" typename="BASE" size="16" baseversion="1" basechecksum="-1877229523"/>
+      <TStreamerString name="fName" title="name of the collection" v="2" type="65" typename="TString" size="24"/>
+      <TStreamerBasicType name="fSize" title="number of elements in collection" v="2" type="3" typename="int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoManager" title="" v="9" classversion="17" canoptimize="true" checksum="-98813806">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBasicType name="fNNodes" title="total number of physical nodes" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fVisDensity" title="transparency threshold by density" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fExplodedView" title="exploded view mode" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fVisOption" title="global visualization option" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fVisLevel" title="maximum visualization depth" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNsegments" title="number of segments to approximate circles" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNtracks" title="number of tracks" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fMaxVisNodes" title="maximum number of visible nodes" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNpdg" title="number of different pdg's stored" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fPdgId" title="pdg conversion table" v="2" type="23" typename="int" size="4096" numdim="1" dim0="1024"/>
+      <TStreamerBasicType name="fStreamVoxels" title="flag to allow voxelization I/O" v="2" type="18" typename="bool" size="1"/>
+      <TStreamerBasicType name="fPhiCut" title="flag for phi cuts" v="2" type="18" typename="bool" size="1"/>
+      <TStreamerBasicType name="fTimeCut" title="time cut for tracks" v="2" type="18" typename="bool" size="1"/>
+      <TStreamerObjectPointer name="fMatrices" title="-&gt; list of local transformations" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fShapes" title="-&gt; list of shapes" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fVolumes" title="-&gt; list of volumes" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fPhysicalNodes" title="-&gt; list of physical nodes" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fTracks" title="-&gt; list of tracks attached to geometry" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fPdgNames" title="-&gt; list of pdg names for tracks" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fGDMLMatrices" title="-&gt; list of matrices read from GDML" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fOpticalSurfaces" title="-&gt; list of optical surfaces read from GDML" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fSkinSurfaces" title="-&gt; list of skin surfaces read from GDML" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fBorderSurfaces" title="-&gt; list of border surfaces read from GDML" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fMaterials" title="-&gt; list of materials" v="2" type="63" typename="TList*" size="8"/>
+      <TStreamerObjectPointer name="fMedia" title="-&gt; list of tracking media" v="2" type="63" typename="TList*" size="8"/>
+      <TStreamerObjectPointer name="fNodes" title="-&gt; current branch of nodes" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fOverlaps" title="-&gt; list of geometrical overlaps" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fRegions" title="-&gt; list of regions" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fMasterVolume" title="master volume" v="2" type="64" typename="TGeoVolume*" size="8"/>
+      <TStreamerObjectPointer name="fGLMatrix" title="matrix to be used for view transformations" v="2" type="64" typename="TGeoHMatrix*" size="8"/>
+      <TStreamerObjectPointer name="fUniqueVolumes" title="-&gt; list of unique volumes" v="2" type="63" typename="TObjArray*" size="8"/>
+      <TStreamerBasicType name="fNLevel" title="maximum accepted level in geometry" v="2" type="3" typename="int" size="4"/>
+      <TStreamerObjectPointer name="fHashPNE" title="-&gt; hash list of physical node entries" v="2" type="63" typename="THashList*" size="8"/>
+      <TStreamerBasicType name="fSizePNEId" title="size of the array of unique ID's for PN entries" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNPNEId" title="number of PN entries having a unique ID" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicPointer name="fKeyPNEId" title="[fSizePNEId] array of uid values for PN entries" v="2" type="43" typename="int*" size="8" countversion="17" countname="fSizePNEId" countclass="TGeoManager"/>
+      <TStreamerBasicPointer name="fValuePNEId" title="[fSizePNEId] array of pointers to PN entries with ID's" v="2" type="43" typename="int*" size="8" countversion="17" countname="fSizePNEId" countclass="TGeoManager"/>
+      <TStreamerBasicType name="fUsePWNav" title="Activate usage of parallel world in navigation" v="2" type="18" typename="bool" size="1"/>
+      <TStreamerObjectPointer name="fParallelWorld" title="Parallel world" v="2" type="64" typename="TGeoParallelWorld*" size="8"/>
+      <TStreamerSTL name="fProperties" title="Map of user-defined constant properties" v="3" type="300" typename="map&lt;string,double&gt;" size="48" STLtype="4" Ctype="61"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoIdentity" title="" v="9" classversion="1" canoptimize="true" checksum="-89045436">
+      <TStreamerBase name="TGeoMatrix" title="base geometrical transformation class" v="3" type="0" typename="BASE" size="64" baseversion="1" basechecksum="526384657"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoMatrix" title="" v="9" classversion="1" canoptimize="true" checksum="526384657">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoHMatrix" title="" v="9" classversion="1" canoptimize="true" checksum="895446987">
+      <TStreamerBase name="TGeoMatrix" title="base geometrical transformation class" v="3" type="0" typename="BASE" size="64" baseversion="1" basechecksum="526384657"/>
+      <TStreamerBasicType name="fTranslation" title="translation component" v="2" type="28" typename="double" size="24" numdim="1" dim0="3"/>
+      <TStreamerBasicType name="fRotationMatrix" title="rotation matrix" v="2" type="28" typename="double" size="72" numdim="1" dim0="9"/>
+      <TStreamerBasicType name="fScale" title="scale component" v="2" type="28" typename="double" size="24" numdim="1" dim0="3"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoTranslation" title="" v="9" classversion="1" canoptimize="true" checksum="2145949316">
+      <TStreamerBase name="TGeoMatrix" title="base geometrical transformation class" v="3" type="0" typename="BASE" size="64" baseversion="1" basechecksum="526384657"/>
+      <TStreamerBasicType name="fTranslation" title="translation vector" v="2" type="28" typename="double" size="24" numdim="1" dim0="3"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoBBox" title="" v="9" classversion="1" canoptimize="true" checksum="1660143877">
+      <TStreamerBase name="TGeoShape" title="base class for shapes" v="3" type="0" typename="BASE" size="72" baseversion="2" basechecksum="584644111"/>
+      <TStreamerBasicType name="fDX" title="X half-length" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fDY" title="Y half-length" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fDZ" title="Z half-length" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fOrigin" title="box origin" v="2" type="28" typename="double" size="24" numdim="1" dim0="3"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoShape" title="" v="9" classversion="2" canoptimize="true" checksum="584644111">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBasicType name="fShapeId" title="shape id" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fShapeBits" title="shape bits" v="2" type="13" typename="unsigned int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoPgon" title="" v="9" classversion="1" canoptimize="true" checksum="976402104">
+      <TStreamerBase name="TGeoPcon" title="polycone class" v="3" type="0" typename="BASE" size="232" baseversion="1" basechecksum="-802830603"/>
+      <TStreamerBasicType name="fNedges" title="number of edges (at least one)" v="2" type="3" typename="int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoPcon" title="" v="9" classversion="1" canoptimize="true" checksum="-802830603">
+      <TStreamerBase name="TGeoBBox" title="box primitive" v="3" type="0" typename="BASE" size="120" baseversion="1" basechecksum="1660143877"/>
+      <TStreamerBasicType name="fNz" title="number of z planes (at least two)" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fPhi1" title="lower phi limit (converted to [0,2*pi)" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fDphi" title="phi range" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicPointer name="fRmin" title="[fNz] pointer to array of inner radii" v="2" type="48" typename="double*" size="8" countversion="1" countname="fNz" countclass="TGeoPcon"/>
+      <TStreamerBasicPointer name="fRmax" title="[fNz] pointer to array of outer radii" v="2" type="48" typename="double*" size="8" countversion="1" countname="fNz" countclass="TGeoPcon"/>
+      <TStreamerBasicPointer name="fZ" title="[fNz] pointer to array of Z planes positions" v="2" type="48" typename="double*" size="8" countversion="1" countname="fNz" countclass="TGeoPcon"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoVolume" title="" v="9" classversion="6" canoptimize="true" checksum="-1503001054">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBase name="TGeoAtt" title="class for visibility, activity and optimization attributes for volumes/nodes" v="3" type="0" typename="BASE" size="16" baseversion="1" basechecksum="-2061199034"/>
+      <TStreamerBase name="TAttLine" title="Line attributes" v="3" type="0" typename="BASE" size="16" baseversion="2" basechecksum="-1811462839"/>
+      <TStreamerBase name="TAttFill" title="Fill area attributes" v="3" type="0" typename="BASE" size="16" baseversion="2" basechecksum="-2545006"/>
+      <TStreamerBase name="TAtt3D" title="3D attributes" v="3" type="0" typename="BASE" size="8" baseversion="1" basechecksum="30074"/>
+      <TStreamerObjectPointer name="fNodes" title="array of nodes inside this volume" v="2" type="64" typename="TObjArray*" size="8"/>
+      <TStreamerObjectPointer name="fShape" title="shape" v="2" type="64" typename="TGeoShape*" size="8"/>
+      <TStreamerObjectPointer name="fMedium" title="tracking medium" v="2" type="64" typename="TGeoMedium*" size="8"/>
+      <TStreamerObjectPointer name="fFinder" title="finder object for divisions" v="2" type="64" typename="TGeoPatternFinder*" size="8"/>
+      <TStreamerObjectPointer name="fVoxels" title="finder object for bounding boxes" v="2" type="64" typename="TGeoVoxelFinder*" size="8"/>
+      <TStreamerBasicType name="fNumber" title="volume serial number in the list of volumes" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNtotal" title="total number of physical nodes" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fRefCount" title="reference counter" v="2" type="3" typename="int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoAtt" title="" v="9" classversion="1" canoptimize="true" checksum="-2061199034">
+      <TStreamerBasicType name="fGeoAtt" title="option flags" v="2" type="13" typename="unsigned int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TAttLine" title="" v="9" classversion="2" canoptimize="true" checksum="-1811462839">
+      <TStreamerBasicType name="fLineColor" title="Line color" v="2" type="2" typename="short" size="2"/>
+      <TStreamerBasicType name="fLineStyle" title="Line style" v="2" type="2" typename="short" size="2"/>
+      <TStreamerBasicType name="fLineWidth" title="Line width" v="2" type="2" typename="short" size="2"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TAttFill" title="" v="9" classversion="2" canoptimize="true" checksum="-2545006">
+      <TStreamerBasicType name="fFillColor" title="Fill area color" v="2" type="2" typename="short" size="2"/>
+      <TStreamerBasicType name="fFillStyle" title="Fill area style" v="2" type="2" typename="short" size="2"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TAtt3D" title="" v="9" classversion="1" canoptimize="true" checksum="30074"/>
+    <TStreamerInfo name="TObjArray" title="" v="9" classversion="3" canoptimize="true" checksum="-1449237166">
+      <TStreamerBase name="TSeqCollection" title="Sequenceable collection ABC" v="3" type="0" typename="BASE" size="48" baseversion="0" basechecksum="-60015674"/>
+      <TStreamerBasicType name="fLowerBound" title="Lower bound of the array" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fLast" title="Last element in array containing an object" v="2" type="3" typename="int" size="4"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TString" title="" v="9" classversion="2" canoptimize="true" checksum="95257"/>
+    <TStreamerInfo name="TGeoMedium" title="" v="9" classversion="1" canoptimize="true" checksum="2037389975">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBasicType name="fId" title="unique Id" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fParams" title="parameters" v="2" type="28" typename="double" size="160" numdim="1" dim0="20"/>
+      <TStreamerObjectPointer name="fMaterial" title="pointer to material" v="2" type="64" typename="TGeoMaterial*" size="8"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoMaterial" title="" v="9" classversion="7" canoptimize="true" checksum="1766977527">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBase name="TAttFill" title="Fill area attributes" v="3" type="0" typename="BASE" size="16" baseversion="2" basechecksum="-2545006"/>
+      <TStreamerBasicType name="fIndex" title="material index" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fA" title="A of material" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fZ" title="Z of material" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fDensity" title="density of material" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fRadLen" title="radiation length" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fIntLen" title="interaction length" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fTemperature" title="temperature" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fPressure" title="pressure" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fState" title="material state" v="2" type="3" typename="TGeoMaterial::EGeoMaterialState" size="4"/>
+      <TStreamerObjectPointer name="fShader" title="shader with optical properties" v="2" type="64" typename="TObject*" size="8"/>
+      <TStreamerObjectPointer name="fCerenkov" title="pointer to class with Cerenkov properties" v="2" type="64" typename="TObject*" size="8"/>
+      <TStreamerObjectPointer name="fElement" title="pointer to element composing the material" v="2" type="64" typename="TGeoElement*" size="8"/>
+      <TStreamerObject name="fProperties" title="user-defined properties" v="2" type="61" typename="TList" size="104"/>
+      <TStreamerObject name="fConstProperties" title="user-defined constant properties" v="2" type="61" typename="TList" size="104"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoElement" title="" v="9" classversion="3" canoptimize="true" checksum="1931816381">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBasicType name="fZ" title="Z of element" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fN" title="Number of nucleons" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNisotopes" title="Number of isotopes for the element" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fA" title="A of element" v="2" type="8" typename="double" size="8"/>
+      <TStreamerObjectPointer name="fIsotopes" title="List of isotopes" v="2" type="64" typename="TObjArray*" size="8"/>
+      <TStreamerBasicPointer name="fAbundances" title="[fNisotopes] Array of relative isotope abundances" v="2" type="48" typename="double*" size="8" countversion="3" countname="fNisotopes" countclass="TGeoElement"/>
+      <TStreamerBasicType name="fCoulomb" title="Coulomb correction factor" v="2" type="8" typename="double" size="8"/>
+      <TStreamerBasicType name="fRadTsai" title="Tsai formula for the radiation length" v="2" type="8" typename="double" size="8"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoVoxelFinder" title="" v="9" classversion="4" canoptimize="true" checksum="-1070461118">
+      <TStreamerBase name="TObject" title="Basic ROOT object" v="3" type="66" typename="BASE" size="16" baseversion="1" basechecksum="-1877229523"/>
+      <TStreamerObjectPointer name="fVolume" title="volume to which applies" v="2" type="64" typename="TGeoVolume*" size="8"/>
+      <TStreamerBasicType name="fIbx" title="number of different boundaries on X axis" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fIby" title="number of different boundaries on Y axis" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fIbz" title="number of different boundaries on Z axis" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNboxes" title="length of boxes array" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNox" title="length of array of X offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNoy" title="length of array of Y offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNoz" title="length of array of Z offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNex" title="length of array of X extra offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNey" title="length of array of Y extra offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNez" title="length of array of Z extra offsets" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNx" title="length of array of X voxels" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNy" title="length of array of Y voxels" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fNz" title="length of array of Z voxels" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicType name="fPriority" title="priority for each axis" v="2" type="23" typename="int" size="12" numdim="1" dim0="3"/>
+      <TStreamerBasicPointer name="fBoxes" title="[fNboxes] list of bounding boxes" v="2" type="48" typename="double*" size="8" countversion="4" countname="fNboxes" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fXb" title="[fIbx] ordered array of X box boundaries" v="2" type="48" typename="double*" size="8" countversion="4" countname="fIbx" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fYb" title="[fIby] ordered array of Y box boundaries" v="2" type="48" typename="double*" size="8" countversion="4" countname="fIby" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fZb" title="[fIbz] ordered array of Z box boundaries" v="2" type="48" typename="double*" size="8" countversion="4" countname="fIbz" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOBx" title="[fNox] offsets of daughter indices for slices X" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNox" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOBy" title="[fNoy] offsets of daughter indices for slices Y" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoy" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOBz" title="[fNoz] offsets of daughter indices for slices Z" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoz" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOEx" title="[fNox] offsets of extra indices for slices X" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNox" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOEy" title="[fNoy] offsets of extra indices for slices Y" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoy" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fOEz" title="[fNoz] offsets of extra indices for slices Z" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoz" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fExtraX" title="[fNex] indices of extra daughters in X slices" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNex" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fExtraY" title="[fNey] indices of extra daughters in Y slices" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNey" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fExtraZ" title="[fNez] indices of extra daughters in Z slices" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNez" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fNsliceX" title="[fNox] number of candidates in X slice" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNox" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fNsliceY" title="[fNoy] number of candidates in Y slice" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoy" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fNsliceZ" title="[fNoz] number of candidates in Z slice" v="2" type="43" typename="int*" size="8" countversion="4" countname="fNoz" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fIndcX" title="[fNx] array of slices bits on X" v="2" type="51" typename="unsigned char*" size="8" countversion="4" countname="fNx" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fIndcY" title="[fNy] array of slices bits on Y" v="2" type="51" typename="unsigned char*" size="8" countversion="4" countname="fNy" countclass="TGeoVoxelFinder"/>
+      <TStreamerBasicPointer name="fIndcZ" title="[fNz] array of slices bits on Z" v="2" type="51" typename="unsigned char*" size="8" countversion="4" countname="fNz" countclass="TGeoVoxelFinder"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoNodeMatrix" title="" v="9" classversion="1" canoptimize="true" checksum="826228293">
+      <TStreamerBase name="TGeoNode" title="base class for all geometry nodes" v="3" type="0" typename="BASE" size="128" baseversion="2" basechecksum="951823235"/>
+      <TStreamerObjectPointer name="fMatrix" title="transf. matrix of fNode in fMother system" v="2" type="64" typename="TGeoMatrix*" size="8"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoNode" title="" v="9" classversion="2" canoptimize="true" checksum="951823235">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerBase name="TGeoAtt" title="class for visibility, activity and optimization attributes for volumes/nodes" v="3" type="0" typename="BASE" size="16" baseversion="1" basechecksum="-2061199034"/>
+      <TStreamerObjectPointer name="fVolume" title="volume associated with this" v="2" type="64" typename="TGeoVolume*" size="8"/>
+      <TStreamerObjectPointer name="fMother" title="mother volume" v="2" type="64" typename="TGeoVolume*" size="8"/>
+      <TStreamerBasicType name="fNumber" title="copy number" v="2" type="3" typename="int" size="4"/>
+      <TStreamerBasicType name="fNovlp" title="number of overlaps" v="2" type="6" typename="int" size="4"/>
+      <TStreamerBasicPointer name="fOverlaps" title="[fNovlp] list of indices for overlapping brothers" v="2" type="43" typename="int*" size="8" countversion="2" countname="fNovlp" countclass="TGeoNode"/>
+    </TStreamerInfo>
+    <TStreamerInfo name="TGeoParallelWorld" title="" v="9" classversion="3" canoptimize="true" checksum="-2114247490">
+      <TStreamerBase name="TNamed" title="The basis for a named object (name, title)" v="3" type="67" typename="BASE" size="64" baseversion="1" basechecksum="-541636036"/>
+      <TStreamerObjectPointer name="fGeoManager" title="base geometry" v="2" type="64" typename="TGeoManager*" size="8"/>
+      <TStreamerObjectPointer name="fPaths" title="array of paths" v="2" type="64" typename="TObjArray*" size="8"/>
+      <TStreamerBasicType name="fUseOverlaps" title="Activated if user defined overlapping candidates" v="2" type="18" typename="bool" size="1"/>
+    </TStreamerInfo>
+  </StreamerInfos>
+</root>
