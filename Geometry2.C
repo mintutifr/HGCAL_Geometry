@@ -10,14 +10,14 @@
 
 void Geometry2()
 {
-   Double_t a = 10.6;   //Side length od the Hexagone
-   Double_t Width_Pb_layer_Typ1 = 3.87;
-   Double_t Width_Pb_layer_Typ2 = 6.07;
-   Double_t Width_Pb_layer_Typ3 = 9.32;
-   Double_t Width_Cu_layer = 6.2;
-   Double_t Width_active_layer = 4.0;
-   Double_t Width_active_si_wefer = 0.31;
-   Double_t Width_vacuum_layer = 5.1;
+   Double_t a = 10.16;   //Side length od the Hexagone
+   Double_t Width_Pb_layer_Typ1 = 0.387;
+   Double_t Width_Pb_layer_Typ2 = 0.607;
+   Double_t Width_Pb_layer_Typ3 = 0.932;
+   Double_t Width_Cu_layer = 0.62;
+   Double_t Width_active_layer = 0.4;
+   Double_t Width_active_si_wefer = 0.031;
+   Double_t Width_vacuum_layer = 0.51;
    Double_t length_layer = 5.1*a/2;
 
    Double_t CEE_Casset_Typ1_width = Width_Pb_layer_Typ1+2*Width_vacuum_layer+2*Width_active_layer+Width_Cu_layer;
@@ -156,6 +156,7 @@ void Geometry2()
 
    geom->SetTopVisible(); // the TOP is invisible
    geom->Export("mygeometry.xml");
+   geom->Export("mygeometry.gdml");
    detec->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
