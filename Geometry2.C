@@ -155,8 +155,8 @@ void Geometry2()
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
-   geom->Export("mygeometry.xml");
-   geom->Export("mygeometry.gdml");
+   geom->Export("mygeometry_dd4ENV.xml");
+   geom->Export("mygeometry_dd4ENV.gdml");
    detec->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
