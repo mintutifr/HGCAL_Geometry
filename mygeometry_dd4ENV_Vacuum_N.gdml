@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+  <define/>
+  <materials>
+    <material name="N" Z="7">
+      <D unit="g/cm3" value="0.0011651999999999999"/>
+      <atom unit="g/mole" value="14.068"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="Detector" x="51.815999999999995" y="51.815999999999995" z="9.2460000000000004" lunit="cm"/>
+  </solids>
+  <structure>
+    <volume name="Detector">
+      <materialref ref="N"/>
+      <solidref ref="Detector"/>
+    </volume>
+  </structure>
+  <setup name="default" version="1.0">
+    <world ref="Detector"/>
+  </setup>
+</gdml>
