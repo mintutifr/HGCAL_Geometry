@@ -33,23 +33,21 @@ void Geometry2()
    Int_t i;
 
     //--- define some materials
-    //TGeoMaterial *matVacuum = new TGeoMaterial("Vacuum", 0,0,0);
-    TGeoMaterial *matNitrogen = new TGeoMaterial("N", 14.068,7.0,0.0011652);	
-    /*TGeoMaterial *matSi = new TGeoMaterial("Si", 28.09,14,2.3296);
+    TGeoMaterial *matVacuum = new TGeoMaterial("Vacuum", 0,0,0);
+    TGeoMaterial *matSi = new TGeoMaterial("Si", 28.09,14,2.3296);
     TGeoMaterial *matCu = new TGeoMaterial("Cu", 63.546,29,8.96);
-    TGeoMaterial *matPb = new TGeoMaterial("Pb", 207.2,82,11.342);*/
+    TGeoMaterial *matPb = new TGeoMaterial("Pb", 207.2,82,11.342);
     //   //--- define some media
-    //TGeoMedium *Vacuum = new TGeoMedium("Vacuum",1, matVacuum);
-    TGeoMedium *N = new TGeoMedium("N",1, matNitrogen);
-    /*TGeoMedium *Si = new TGeoMedium("Si Material",2, matSi);
+    TGeoMedium *Vacuum = new TGeoMedium("Vacuum",1, matVacuum);
+    TGeoMedium *Si = new TGeoMedium("Si Material",2, matSi);
     TGeoMedium *Cu = new TGeoMedium("Cu Material",3, matCu);
-    TGeoMedium *Pb = new TGeoMedium("Pb Material",4, matPb);*/
+    TGeoMedium *Pb = new TGeoMedium("Pb Material",4, matPb);
 
    //--define detecter volume
-   TGeoVolume *detec = geom->MakeBox("Detector", N, length_layer, length_layer,detector_width/2);
+   TGeoVolume *detec = geom->MakeBox("Detector", Vacuum, length_layer, length_layer,detector_width/2);
 
    //--define Casset volumes volume
-  /* TGeoVolume *CEE_Casset_Typ1 = geom->MakeBox("CEE_Casset_Typ1", Vacuum, length_layer, length_layer,CEE_Casset_Typ1_width/2);
+   TGeoVolume *CEE_Casset_Typ1 = geom->MakeBox("CEE_Casset_Typ1", Vacuum, length_layer, length_layer,CEE_Casset_Typ1_width/2);
    TGeoVolume *CEE_Casset_Typ2 = geom->MakeBox("CEE_Casset_Typ2", Vacuum, length_layer, length_layer,CEE_Casset_Typ2_width/2);
    TGeoVolume *CEE_Casset_Typ3 = geom->MakeBox("CEE_Casset_Typ3", Vacuum, length_layer, length_layer,CEE_Casset_Typ3_width/2);
 
@@ -60,11 +58,11 @@ void Geometry2()
    TGeoVolume *layer_Cu = geom->MakeBox("PbLAYER", Cu,length_layer,length_layer,Width_Cu_layer/2);
    TGeoVolume *layer_active = geom->MakeBox("ACTIVELAYER", Vacuum,length_layer,length_layer,Width_active_layer/2);
    TGeoVolume *layer_vacuum = geom->MakeBox("VACUUMLAYER", Vacuum,length_layer,length_layer,Width_vacuum_layer/2);
-*/
+
    //set top volume
    geom->SetTopVolume(detec);
 
-/*
+
    //--- make the hexagon container volume
    TGeoVolume *hexa_si = geom->MakePgon("HEXA_Si", Si, 0.0,360.0,6,2);
    hexa_si->SetLineColor(kGreen);
@@ -153,12 +151,12 @@ void Geometry2()
    detec->AddNode(CEE_Casset_Typ1,1, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width/2));
    detec->AddNode(CEE_Casset_Typ2,2, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width-CEE_Casset_Typ2_width/2));
    detec->AddNode(CEE_Casset_Typ3,3, new TGeoTranslation(0., 0., detector_width/2-CEE_Casset_Typ1_width-CEE_Casset_Typ2_width-CEE_Casset_Typ3_width/2));
-*/
+
    geom->CloseGeometry();
 
    geom->SetTopVisible(); // the TOP is invisible
-   geom->Export("mygeometry_dd4ENV_Vacuum_N.xml");
-   geom->Export("mygeometry_dd4ENV_Vacuum_N.gdml");
+   //geom->Export("mygeometry_dd4ENV_Vacuum_N.xml");
+   //geom->Export("mygeometry_dd4ENV_Vacuum_N.gdml");
    detec->Draw();
    //myhex->Draw();
    TView *view = gPad->GetView();
